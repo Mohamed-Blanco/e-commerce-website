@@ -6,5 +6,9 @@
   },
   "scripts": {
     "build-css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch "
+  },
+  "dependencies": {
+    "flowbite": "^2.3.0",
+    "preline": "^2.1.0"
   }
 }
