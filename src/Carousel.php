@@ -24,15 +24,15 @@
       <div class="overflow-hidden relative carousel-height ">
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <!-- Apply the carousel-height class to the image as well -->
-          <img src="../images/anoncedoliprane.jpg" class=" block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+          <img src="../images/annonce1.jpg" class=" carousel-height block absolute center  top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIt-ocQzz_bQww433vSf4dEfglV497Aeq2KhBPPW1qzwJQJ5tojXOKNSLjeLaHtYlr884&usqp=CAU" class=" block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+          <img src="../images/annonce2.jpg" class=" carousel-height block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk0vDOQB9SYjopqZmq0NbyzOnb8KTRpGvlh8ffvZITyCkleSPPuFPJBiIFr3A9Rq0Fe-k&usqp=CAU" class=" block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+          <img src="../images/annonce3.jpg" class=" carousel-height block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
       </div>
 
