@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
 </head>
 <style type="text/css">
-@font-face{
-    font-family:"helvetica";
-    src:url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
-    url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
-    url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
-}
+
 
 </style>
 <style>
@@ -21,10 +18,17 @@
         border-radius: 50%; /* This makes the element circular */
         background-color: #3DB2FF ; /* Adjust color as needed */
     }
+    .poppins- {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 </style>
-<body class=" font-[helvetica]">
-        <nav style = " background-color :#F4FAFF ; " class="font-[helvetica] hidden  pl-10 pr-5 p-2  md:items-center jus md:flex md:justify-between" >
-            <p class ="pl-5"  >Due to the COVID 19 epidemic, orders may be processed with a slight delay</p>
+<body class=" poppins">
+        <nav style = " background-color :#F4FAFF ; " class="hidden  pl-10 pr-5 p-2  md:items-center jus md:flex md:justify-between" >
+            <p class ="pl-5"  >En raison de l'épidémie de COVID-19, les commandes peuvent être traitées avec un léger retard.
+
+Recommandez </p>
             <div class="pr-5 "><a href="" class="mr-5 hover:text-cyan-500 duration-500"><i class="fa-regular fa-user"></i> Login / Register</a><a href="" class=" hover:text-cyan-500 duration-500"><i class="mr-5 fa-solid fa-heart"></i>Favories </a></div>
             
         </nav>
@@ -48,7 +52,7 @@
                 </li>
             </ul>
             
-            <a href="#" class=" mr-10 ml-10 text-black hover:text-cyan-500 duration-500 flex " ><i style="font-size:1.4rem; margin-top: 7px;"class=" fa-solid fa-cart-shopping"></i><div style="margin-left:-7px; font-size:0.9rem;" class="text-white flex justify-center items-center  border circle"><p class ="font-[helvetica]">0</p></div></a>
+            <a href="#" class=" mr-10 ml-10 text-black hover:text-cyan-500 duration-500 flex " ><i style="font-size:1.4rem; margin-top: 7px;"class=" fa-solid fa-cart-shopping"></i><div style="margin-left:-7px; font-size:0.9rem;" class="text-white flex justify-center items-center  border circle"><p class ="text-white font-[helvetica]">0</p></div></a>
             
         </nav>
         
