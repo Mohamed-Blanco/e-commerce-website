@@ -10,6 +10,10 @@
     <title>Document</title>
 </head>
 <body>
-        <p class = "text-black" >PRODUCTS SECTION</p>
+        <p class = "bg-white" >PRODUCTS SECTION</p>
 </body>
 </html>
+
+<?php 
+    include '../Footer/Footerview.php'
+?>
