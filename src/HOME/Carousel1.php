@@ -8,9 +8,15 @@
   <title>Static Template</title>
   <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   <style>
+    
     .carousel-height {
       height: 500px; /* Adjust the height as needed */
     }
+    .carousel-height-phone{
+      height: 400px;
+    }
+
+
   </style>
 </head>
 
@@ -24,15 +30,19 @@
       <div class="overflow-hidden relative carousel-height ">
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <!-- Apply the carousel-height class to the image as well -->
-          <img src="../images/annonce1.jpg" class=" carousel-height block absolute center  top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+          <img src="../images/annonce1.jpg" class=" hidden md:block carousel-height absolute center  top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+          <img src="../images/annonce1phone.jpg" class=" md:hidden block carousel-height absolute center  top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+
         </div>
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="../images/annonce2.jpg" class=" carousel-height block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+        <img src="../images/annonce2phone.jpg" class=" md:hidden block carousel-height absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">  
+        <img src="../images/annonce2.jpg" class=" hidden md:block carousel-height absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="../images/annonce3.jpg" class=" carousel-height block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+        <img src="../images/annonce3phone.jpg" class="md:hidden block  carousel-height absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+          <img src="../images/annonce3.jpg" class="hidden md:block  carousel-height absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
       </div>
 
