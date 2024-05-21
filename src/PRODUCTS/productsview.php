@@ -13,7 +13,12 @@
         <p class = "bg-white" >PRODUCTS SECTION</p>
 </body>
 </html>
+<<<<<<< HEAD
+<?php
+include '../Footer/Footerview.php'
+=======
 
 <?php 
     include '../Footer/Footerview.php'
+>>>>>>> 7209fe821dc84c43c45fc5f59eb3b623a5221236
 ?>
