@@ -38,26 +38,26 @@ Recommandez </p>
                 <img src="../images/LogoPharma.png" class="h-16 inline mr-10" ></img>
                 
                 <span class=" md:hidden self-center pr-5">
-                <i name="Menu" onclick="Menu(this)" class="text-xl fa-solid fa-bars "></i>
+                <i id="menu" name="Menu" onclick="Menu(this)" class="text-xl fa-solid fa-bars "></i>
                 </span>
             </div>
 
 
-            <ul  name ="Menu" class = " duration-500 md:flex md:static hidden z-[-1] md:z-auto md:opacity-100 opacity-0" style="font-size:1.08rem;">
+            <ul  id="ull"name ="Menu" class = " md:flex md:static  z-[-1] md:z-auto " style="font-size:1.08rem;">
                 <li class="mx-8">
-                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " >Home</a>
+                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-solid fa-house mr-2 md:opacity-0 opacity-100"></i>Home</a>
                 </li>
                 <li class="mx-8">
-                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " >Produits</a>
+                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-brands fa-product-hunt mr-2 md:opacity-0 opacity-100 "></i> Produits</a>
                 </li>
                 <li class="mx-8">
-                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " >About Us</a>
+                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-solid fa-question mr-5 md:opacity-0 opacity-100"></i>About Us</a>
                 </li>
                 <li class="mx-8">
-                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " >Contact Us</a>
+                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-solid fa-phone mr-2 md:opacity-0 opacity-100"></i>Contact Us</a>
                 </li>
                 <li class="mx-8 md:hidden ">
-                <a href="#" class=" text-black hover:text-cyan-500 duration-500 " >Panier</a>
+                <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-solid fa-phone mr-2 md:opacity-0 opacity-100"></i>Panier</a>
 
                 </li>
             </ul>
@@ -66,27 +66,26 @@ Recommandez </p>
             
         </nav>
         
+
+        <script src="https://kit.fontawesome.com/beb14da2c9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
+         let i = 180;
+         $('#menu').on('click', function (){
             
+             $("ul").slideToggle(500);
+             
+             
+         });   
 function Menu(e) {
-    let list = document.querySelector('ul');
+    /*let list = document.querySelector('ul');
     
       
     
 
-    if (e.name === "Menu") {
-        
-        list.classList.remove('hidden', 'opacity-0');
-        list.classList.add('opacity-100','duration-500');
-       
-        e.name = ".";
-    } else {
-        
-        list.classList.add('opacity-0','hidden');
-        list.classList.remove('opacity-100');
-        
-        e.name = 'Menu';
-    }
+   */
 }
 </script>
 
