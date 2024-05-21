@@ -13,3 +13,6 @@
         <p class = "text-black" >PRODUCTS SECTION</p>
 </body>
 </html>
+<?php
+include '../Footer/Footerview.php'
+?>
