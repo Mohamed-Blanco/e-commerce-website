@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Responsive Sidebar</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         input[type=range]::-webkit-slider-thumb {
@@ -42,8 +42,14 @@
 <body class="bg-gray-100">
     <div class="flex justify-center p-4">
         <div class="w-full max-w-6xl p-4 bg-white shadow-md">
-            <div class="flex flex-col md:flex-row">
-                <div class="p-4 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0 md:w-1/3">
+            <div class="flex">
+                <!-- Button to toggle sidebar on small screens -->
+                <button id="toggle-sidebar" class="flex items-center p-2 mr-4 md:hidden">
+                    <img class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" src="../../images/2.png">
+                    Filtrer
+                </button>
+
+                <div id="sidebar" class="hidden p-4 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0 md:w-1/3 md:block">
                     <h2 class="mb-4 text-2xl font-semibold">Product categories</h2>
                     <ul class="mb-8 space-y-2">
                         <li><a href="#" class="text-gray-700 hover:text-blue-500">Category 1</a></li>
@@ -70,7 +76,7 @@
                             <li><a href="#" class="text-gray-700 hover:underline">Mymedi</a></li>
                             <li><a href="#" class="text-gray-700 hover:underline">Nursecare</a></li>
                             <li><a href="#" class="text-gray-700 hover:underline">Nursing</a></li>
-                            <li><a href="#" class="text-gray-700hover:underline">Pharmacy</a></li>
+                            <li><a href="#" class="text-gray-700 hover:underline">Pharmacy</a></li>
                         </ul>
                     </div>
                     <div class="p-4 border border-gray-200 rounded-md bg-gray-50">
@@ -84,10 +90,16 @@
                     </div>
                 </div>
                 <div class="flex-1 p-4">
-                    
+                    <!-- Main content goes here -->
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('toggle-sidebar').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
