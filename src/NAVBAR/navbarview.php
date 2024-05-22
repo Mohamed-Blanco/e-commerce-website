@@ -43,7 +43,7 @@ Recommandez </p>
             </div>
 
 
-            <ul  id="ull"name ="Menu" class = " md:flex md:static  z-[-1] md:z-auto " style="font-size:1.08rem;">
+            <ul  id="slidedown" name ="Menu" class = " md:flex md:static  z-[-1] md:z-auto " style="font-size:1.08rem;">
                 <li class="mx-8">
                     <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-solid fa-house mr-2 md:opacity-0 opacity-100"></i>Home</a>
                 </li>
@@ -75,7 +75,7 @@ Recommandez </p>
          let i = 180;
          $('#menu').on('click', function (){
             
-             $("ul").slideToggle(500);
+             $("#slidedown").slideToggle(500);
              
              
          });   
