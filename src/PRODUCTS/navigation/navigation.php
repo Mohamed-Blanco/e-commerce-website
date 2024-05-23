@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+    <link href="../../output.css" rel="stylesheet">
+    <style>
+        .poppins {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            background: #1D4ED8;
+            width: 16px;
+            height: 16px;
+            border-radius: 9999px;
+            cursor: pointer;
+        }
+        input[type=range]::-moz-range-thumb {
+            background: #1D4ED8;
+            width: 16px;
+            height: 16px;
+            border-radius: 9999px;
+            cursor: pointer;
+        }
+        input[type=range]::-ms-thumb {
+            background: #1D4ED8;
+            width: 16px;
+            height: 16px;
+            border-radius: 9999px;
+            cursor: pointer;
+        }
+        .custom-tag-button {
+            background-color: #D1D5DB;
+            border-radius: 15px;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+        .custom-tag-button:hover {
+            background-color: #1D4ED8; 
+            color: white;
+        }
+    </style>
+</head>
+<body class="poppins">
+
+    <div class="flex justify-center">
+        <div class="w-full p-4 shadow-md">
+            <div class="relative">
+                <button id="filterButton" class="flex items-center px-4 py-2 mb-4 text-black bg-gray-200 rounded-full md:hidden">
+                    <img src="../../images/2.png" class="w-6 h-6 mr-2" alt="Filtrer"> Filtrer
+                </button>
+                <div id="filterMenu" class="absolute top-0 left-0 z-10 flex-col hidden w-full bg-white md:flex md:flex-row md:relative md:w-auto">
+                    <div class="p-4 mt-5 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0 md:w-1/3">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-2xl font-semibold text-black">Product categories</h2>
+                            <button id="closeButton" class="text-black md:hidden">✖</button>
+                        </div>
+                        <ul class="mb-8 space-y-2">
+                            <li><a href="#" class="text-black hover:text-blue-500">Category 1</a></li>
+                            <li><a href="#" class="text-black hover:text-blue-500">Category 2</a></li>
+                            <li><a href="#" class="text-black hover:text-blue-500">Category 3</a></li>
+                            <li><a href="#" class="text-black hover:text-blue-500">Category 4</a></li>
+                        </ul>
+                        <div class="p-4 border border-gray-200 rounded-md bg-gray-50">
+                            <h3 class="mb-2 text-xl font-semibold text-black">Filter by Price</h3>
+                            <input type="range" min="0" max="1000" step="10" class="w-full h-2 mb-2 bg-blue-500 rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-sm">
+                                <span>$0</span>
+                                <span>$1000</span>
+                            </div>
+                            <button class="px-20 py-2 mt-4 text-white bg-blue-500 rounded-full">Filter</button>
+                        </div>
+                        <div class="p-4 mt-5 border border-gray-200 rounded-md bg-gray-50">
+                            <h3 class="mb-2 text-xl font-semibold text-black">Product Brands</h3>
+                            <ul class="space-y-1">
+                                <li><a href="#" class="text-black hover:underline">Brain</a></li>
+                                <li><a href="#" class="text-black hover:underline">Facemask</a></li>
+                                <li><a href="#" class="text-black hover:underline">Greenlab</a></li>
+                                <li><a href="#" class="text-black hover:underline">Medical</a></li>
+                                <li><a href="#" class="text-black hover:underline">Mymedi</a></li>
+                                <li><a href="#" class="text-black hover:underline">Nursecare</a></li>
+                                <li><a href="#" class="text-black hover:underline">Nursing</a></li>
+                                <li><a href="#" class="text-black hover:underline">Pharmacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="p-4 mt-5 border border-gray-200 rounded-md bg-gray-50">
+                            <h3 class="mb-2 text-xl font-semibold text-black">Filter by Tags</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="text-black custom-tag-button">New Arrivals</button>
+                                <button class="text-black custom-tag-button">On Sale</button>
+                                <button class="text-black custom-tag-button">Popular</button>
+                                <button class="text-black custom-tag-button">Trending</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 p-4">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const filterButton = document.getElementById('filterButton');
+        const filterMenu = document.getElementById('filterMenu');
+        const closeButton = document.getElementById('closeButton');
+
+        filterButton.addEventListener('click', () => {
+            filterMenu.classList.toggle('hidden');
+            filterButton.classList.toggle('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            filterMenu.classList.add('hidden');
+            filterButton.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

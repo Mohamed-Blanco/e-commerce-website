@@ -1,15 +1,50 @@
-<?php 
-    include '../NAVBAR/navbarview.php'
-?>
+<?php
+include '../NAVBAR/navbarview.php'
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-        <p class = "text-black" >PRODUCTS SECTION</p>
+
+<body class="" style="background-color : white;">
+    <div class="bg-green-100 p-5">
+        <ul id="slidedown" class="flex-rew">
+            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Shop</li>
+            <li class="mb-5 text-center text-bold "><span>Home </span> <span class="text-black text-bold"><i
+                        class="fa-solid fa-caret-right"></i> Shop</span></li>
+        </ul>
+    </div>
+    <div class="bg-cyan-500 flex justify-between">
+        <div class="">
+            <?php
+            include '../PRODUCTS/navigation/navigation.php'
+                ?>
+        </div>
+        <div>
+            <?php
+            include '../PRODUCTS/productsgrid/gridview.php'
+                ?>
+        </div>
+    </div>
 </body>
+
 </html>
+
+<?php
+<<<<<<< HEAD
+include '../Footer/Footerview.php';
+
+?>
+<?php 
+    include '../Footer/Footerview.php';
+
+?>
+=======
+include '../Footer/Footerview.php'
+    ?>
+>>>>>>> 979f9db9f35edfa2809aa7a69aece41e92aa2aae
