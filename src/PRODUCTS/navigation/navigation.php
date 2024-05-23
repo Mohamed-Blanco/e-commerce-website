@@ -41,15 +41,22 @@
 </head>
 <body class="bg-gray-100">
     <div class="flex justify-center p-4">
-        <div class="w-full max-w-6xl p-4 bg-white shadow-md">
+        <div class="w-full max-w-6xl p-4shadow-md">
             <div class="flex">
-                <!-- Button to toggle sidebar on small screens -->
-                <button id="toggle-sidebar" class="flex items-center p-2 mr-4 md:hidden">
-                    <img class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" src="../../images/2.png">
-                    Filtrer
-                </button>
+              
+                <button id="toggle-sidebar" class="flex items-center p-2 mr-4 text-black rounded hover:text-blue-500 md:hidden">
+    <img class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" src="../../images/2.png">
+    Filtrer
+</button>
+
 
                 <div id="sidebar" class="hidden p-4 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0 md:w-1/3 md:block">
+                    <!-- Button to close the sidebar on small screens -->
+                    <button id="close-sidebar" class="flex items-center hidden p-2 mb-4 text-black bg-gray-200 rounded md:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
                     <h2 class="mb-4 text-2xl font-semibold">Product categories</h2>
                     <ul class="mb-8 space-y-2">
                         <li><a href="#" class="text-gray-700 hover:text-blue-500">Category 1</a></li>
@@ -98,7 +105,20 @@
     <script>
         document.getElementById('toggle-sidebar').addEventListener('click', function() {
             const sidebar = document.getElementById('sidebar');
+            const toggleButton = document.getElementById('toggle-sidebar');
+            const closeButton = document.getElementById('close-sidebar');
             sidebar.classList.toggle('hidden');
+            toggleButton.classList.toggle('hidden');
+            closeButton.classList.toggle('hidden');
+        });
+
+        document.getElementById('close-sidebar').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleButton = document.getElementById('toggle-sidebar');
+            const closeButton = document.getElementById('close-sidebar');
+            sidebar.classList.add('hidden');
+            toggleButton.classList.remove('hidden');
+            closeButton.classList.add('hidden');
         });
     </script>
 </body>
