@@ -13,22 +13,19 @@ include '../NAVBAR/navbarview.php'
 
 <body class="" style="background-color : white;">
     <div class="bg-green-100 p-5">
-        <ul id="slidedown" class="flex-rew">
+        <ul id="slidedown" class="flex-row">
             <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Shop</li>
             <li class="mb-5 text-center text-bold "><span>Home </span> <span class="text-black text-bold"><i
                         class="fa-solid fa-caret-right"></i> Shop</span></li>
         </ul>
     </div>
-    <div class=" flex justify-center">
+    <div class="flex flex-col md:flex-row justify-center  md:items-start items-center">
+        
         <div >
-            <?php
-            include '../PRODUCTS/navigation/navigation.php'
-                ?>
+            <?php include '../PRODUCTS/navigation/navigation.php'; ?>
         </div>
         <div>
-            <?php
-            include '../PRODUCTS/productsgrid/gridview.php'
-                ?>
+            <?php include '../PRODUCTS/productsgrid/gridview.php'; ?>
         </div>
     </div>
 </body>
@@ -37,9 +34,5 @@ include '../NAVBAR/navbarview.php'
 
 <?php
 include '../Footer/Footerview.php';
-
-?>
-<?php 
-    include '../Footer/Footerview.php';
 
 ?>
