@@ -36,7 +36,6 @@ include '../NAVBAR/navbarview.php'
 </html>
 
 <?php
-<<<<<<< HEAD
 include '../Footer/Footerview.php';
 
 ?>
@@ -44,7 +43,3 @@ include '../Footer/Footerview.php';
     include '../Footer/Footerview.php';
 
 ?>
-=======
-include '../Footer/Footerview.php'
-    ?>
->>>>>>> 979f9db9f35edfa2809aa7a69aece41e92aa2aae
