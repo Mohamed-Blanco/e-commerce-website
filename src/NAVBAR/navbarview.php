@@ -26,10 +26,10 @@
 </style>
 <body class=" poppins">
         <nav style = " background-color : #6dd089  ; " class="hidden    pl-10 pr-5 p-2  md:items-center jus md:flex md:justify-between" >
-            <p class ="pl-5 hover:text-green-500 duration-500"  >En raison de l'épidémie de COVID-19, les commandes peuvent être traitées avec un léger retard.
+            <p class ="pl-5 hover:text-green-500 text-black duration-500"  >En raison de l'épidémie de COVID-19, les commandes peuvent être traitées avec un léger retard.
 
 Recommandez </p>
-            <div class="pr-5 "><a href="" class="mr-5 hover:text-cyan-500 duration-500"><i class="fa-regular fa-user hover:text-cyan-500 duration-500"></i> Login / Register</a><a href="" class=" hover:text-cyan-500 duration-500"><i class="hover:text-cyan-500 duration-500 mr-5 fa-solid fa-heart"></i>Favories </a></div>
+            <div class="pr-5 "><a href="" class="text-black mr-5 hover:text-cyan-500 duration-500"><i class="fa-regular fa-user hover:text-cyan-500 duration-500"></i> Login / Register</a><a href="" class="text-black hover:text-cyan-500 duration-500"><i class="hover:text-cyan-500 duration-500 mr-5 fa-solid fa-heart text-black"></i>Favories </a></div>
             
         </nav>
         <nav class="ml-8 md:pl-5 pr-5 p-2 bg-white  md:flex md:items-center  justify-between" >
@@ -45,10 +45,10 @@ Recommandez </p>
 
             <ul  id="slidedown" name ="Menu" class = " md:flex md:static  z-[-1] md:z-auto " style="font-size:1.08rem;">
                 <li class="mx-8">
-                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-solid fa-house mr-2 md:opacity-0 opacity-100"></i>Home</a>
+                    <a href="../HOME/homeview.php" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-solid fa-house mr-2 md:opacity-0 opacity-100"></i>Home</a>
                 </li>
                 <li class="mx-8">
-                    <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-brands fa-product-hunt mr-2 md:opacity-0 opacity-100 "></i> Produits</a>
+                    <a href="../PRODUCTS/productsview.php" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-brands fa-product-hunt mr-2 md:opacity-0 opacity-100 "></i> Produits</a>
                 </li>
                 <li class="mx-8">
                     <a href="#" class=" text-black hover:text-cyan-500 duration-500 " ><i class="fa-solid fa-question mr-5 md:opacity-0 opacity-100"></i>About Us</a>

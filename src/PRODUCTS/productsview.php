@@ -14,13 +14,23 @@ include '../NAVBAR/navbarview.php'
 <body class="" style="background-color : white;">
     <div class="bg-green-100 p-5">
         <ul id="slidedown" class="flex-rew">
-            <li class ="text-2xl text-center text-black text-bold mt-5 mb-2" >Shop</li>
-            <li class ="mb-5 text-center text-bold "><span>Home </span> <span class ="text-black text-bold"><i class="fa-solid fa-caret-right"></i> Shop</span></li>
+            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Shop</li>
+            <li class="mb-5 text-center text-bold "><span>Home </span> <span class="text-black text-bold"><i
+                        class="fa-solid fa-caret-right"></i> Shop</span></li>
         </ul>
     </div>
-    <?php
-    include '../PRODUCTS/navigation/navigation.php'
-        ?>
+    <div class="bg-cyan-500 flex justify-between">
+        <div class="">
+            <?php
+            include '../PRODUCTS/navigation/navigation.php'
+                ?>
+        </div>
+        <div>
+            <?php
+            include '../PRODUCTS/productsgrid/gridview.php'
+                ?>
+        </div>
+    </div>
 </body>
 
 </html>

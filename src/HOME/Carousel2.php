@@ -7,9 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Static Template</title>
   <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+  <link href="../output.css" rel="stylesheet">
   <style>
-    .carousel-height {
-      height: 500px;
+    .carousel-heights {
+      height: 400px;
       /* Adjust the height as needed */
     }
   </style>
@@ -21,31 +22,56 @@
     <div id="default-carousel " class=" p-5 relative" data-carousel="static">
 
       <!-- Apply the carousel-height class here -->
-      <div class="overflow-hidden relative carousel-height ">
+      <div class="overflow-hidden relative carousel-heights ">
         <div class="flex justify-center duration-700 ease-in-out" data-carousel-item>
-          <div class=""> <?php include 'Productcard.html'; ?> </div>
-          <?php for ($i = 0; $i < 2; $i++) { ?>
-            <div class=" hidden md:block"> <?php include 'Productcard.html'; ?> </div> <?php } ?>
+
+          <?php for ($i = 0; $i < 5; $i++) {
+            ?>
+            <div class="hidden md:block">
+              <?php include 'Productcard.html' ?>
+            </div>
+            <?php
+          } ?>
+
+          <div class="md:hidden block">
+            <?php include 'Productcard.html' ?>
+          </div>
 
         </div>
 
         <div class="flex justify-center duration-700 ease-in-out" data-carousel-item>
-          <?php include 'Productcard.html' ?>
-        </div>
 
-        <div class="flex justify-center hidden duration-700 ease-in-out" data-carousel-item>
-        <?php include 'Productcard.html' ?>
+          <?php for ($i = 0; $i < 5; $i++) {
+            ?>
+            <div class="hidden md:block">
+              <?php include 'Productcard.html' ?>
+            </div>
+            <?php
+          } ?>
+
+          <div class="md:hidden block">
+            <?php include 'Productcard.html' ?>
+          </div>
+
+        </div>
+        <div class="flex justify-center duration-700 ease-in-out" data-carousel-item>
+
+          <?php for ($i = 0; $i < 5; $i++) {
+            ?>
+            <div class="hidden md:inline-block">
+              <?php include 'Productcard.html' ?>
+            </div>
+            <?php
+          } ?>
+
+          <div class="md:hidden block">
+            <?php include 'Productcard.html' ?>
+          </div>
+
         </div>
       </div>
 
-      <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
-          data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-          data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-          data-carousel-slide-to="2"></button>
-      </div>
+
 
       <button type="button"
         class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
