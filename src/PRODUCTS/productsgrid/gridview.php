@@ -7,13 +7,13 @@
     <link href="output.css" rel="stylesheet">
 </head>
 <body >
-    <div class=" w-auto grid md:grid-rows-2  grid-rows-3 grid-flow-col ">
+    <div class="p-7 w-auto grid md:grid-rows-2  grid-rows-3 grid-flow-col ">
         <?php 
         for($i=0;$i<6;$i++){
             ?>
             <div class="my-2">
                 <?php
-        include '../Productcard.html' ;
+        include '../HOME/Productcard.html' ;
                  ?>
              </div>
              <?php

@@ -48,9 +48,9 @@
 
 
     <div class="flex justify-center poppins">
-        <div class="w-full  p-4  shadow-md">
+        <div class="w-full pt-4 ml-4">
             <div class="flex flex-col md:flex-row">
-                <div class="mt-5 p-4 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0 md:w-1/3">
+                <div class="mt-5 p-4 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0 ">
                     <h2 class="mb-4 text-2xl font-semibold text-black">Product categories</h2>
                     <ul  class="mb-8 space-y-2">
                         <li><a href="#" class="text-black hover:text-blue-500">Category 1</a></li>
@@ -90,9 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex-1 p-4">
-                    
-                </div>
+                
             </div>
         </div>
     </div>

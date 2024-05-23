@@ -19,8 +19,8 @@ include '../NAVBAR/navbarview.php'
                         class="fa-solid fa-caret-right"></i> Shop</span></li>
         </ul>
     </div>
-    <div class="bg-cyan-500 flex justify-between">
-        <div class="">
+    <div class=" flex justify-center">
+        <div >
             <?php
             include '../PRODUCTS/navigation/navigation.php'
                 ?>
