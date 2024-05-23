@@ -19,8 +19,18 @@
 }
 </style>
 <body style="background-color:white " class="poppins">
-        <p class = "text-black font-bold ml-5 mb-4 pt-4" >ABOUT US SECTION</p>
-        <p class="ml-12 text-gray-600 text-base pr-64 mt-7">Mais je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte rendu complet du système, en exposant les véritables enseignements du grand explorateur de la vérité, le maître bâtisseur de l'humanité. Tout cela, juste ici, sur Pharma.</p>
+
+<div class="bg-green-100 p-5">
+        <ul id="slidedown" class="flex-rew">
+            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">About Us</li>
+            <li class="mb-5 text-center text-bold "><span>Home </span> <span class="text-black text-bold"><i
+                        class="fa-solid fa-caret-right"></i> About Us</span></li>
+        </ul>
+    </div>
+    <div class="px-16 p-5">
+        <p class = " text-black font-bold ml-5 mb-4 pt-4 p-5" >ABOUT US SECTION</p>
+        <p class="ml-12 text-gray-600 text-base pr-64 mt-7 ">Mais je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte rendu complet du système, en exposant les véritables enseignements du grand explorateur de la vérité, le maître bâtisseur de l'humanité. Tout cela, juste ici, sur Pharma.</p>
+    </div>    
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pt-14">
         <div class="bg-white shadow-lg rounded-lg p-8">

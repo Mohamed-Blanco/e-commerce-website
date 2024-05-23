@@ -13,17 +13,22 @@ include '../NAVBAR/navbarview.php'
 
 </head>
 <style>
-
-    *{
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    * {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 </style>
 
 <body style="background-color:white">
-
-    <section class="py-12">
+    <div class="bg-green-100 p-5">
+        <ul id="slidedown" class="flex-rew">
+            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Panier</li>
+            <li class="mb-5 text-center text-bold "><span>Home </span> <span class="text-black text-bold"><i
+                        class="fa-solid fa-caret-right"></i> Panier</span></li>
+        </ul>
+    </div>
+    <section class="mb-12">
         <div class="flex justify-between container mx-auto px-4 mt-10">
             <table class="md:ml-5 md:w-3/5 text-left shadow-lg rounded-lg">
                 <thead class="h-32">
@@ -51,7 +56,7 @@ include '../NAVBAR/navbarview.php'
                         </td>
                         <td class="px-4 py-3 text-sm">$20.00</td>
                         <td class="px-4 py-3 text-sm">
-                            <input style ="background-color:white" type="number" value="2" min="1"
+                            <input style="background-color:white" type="number" value="2" min="1"
                                 class="w-16 text-center rounded border appearance-none">
                         </td>
                         <td class="px-4 py-3 text-sm">$40.00</td>
