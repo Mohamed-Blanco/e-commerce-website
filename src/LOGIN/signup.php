@@ -9,14 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<body class="flex items-center">
-
+<style>
+    .poppins {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
+<body style=" background-color: white;"class="poppins flex items-center">
+<div class="bg-green-100 p-5">
+        <ul id="slidedown" class="flex-rew">
+            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Sign Up</li>
+            <li class="mb-5 text-center text-bold "><span>Home </span> <span class="text-black text-bold"><i
+                        class="fa-solid fa-caret-right"></i> Sign up</span></li>
+        </ul>
+    </div>
     <div class="flex justify-center flex-col items-center mx-auto bg-[rgb(234,245,249)] p-4 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl h-[1060px] mt-[100px] mb-[140px] xl:w-[600px] sm:w-[450px] w-[440px]">
         
         
             <p class="font-bold text-center mt-[40px] mb-[20px] text-[rgb(21,12,107)] text-3xl">Créez votre compte</p>
-            <div class="flex justify-center items-center">
-                <button class="xl:w-[500px] sm:w-[360px] w-[340px] border-[2px] rounded-3xl border-[rgb(36,134,199)] h-[40px] text-[rgb(36,134,199)] mt-[20px]" onclick="signup()">
+            <div class="flex justify-center items-center ">
+                <button class="xl:w-[500px] sm:w-[360px] hover:bg-[rgb(80,72,153)] w-[340px] border-[2px] rounded-3xl border-[rgb(36,134,199)] h-[40px]  text-[rgb(36,134,199)] mt-[20px]" onclick="signup()">
                     Vous avez déjà un compte ? Connectez-vous !
                 </button>
             </div>
@@ -24,22 +37,22 @@
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Prenom</p>
-                <input name="prenom" type="text" class="rounded-xl h-[40px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
+                <input name="prenom" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
             </div>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Nom</p>
-                <input name="nom" type="text" class="rounded-xl h-[40px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
+                <input name="nom" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
             </div>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Email</p>
-                <input name="nemail" type="text" class="rounded-xl h-[40px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
+                <input name="nemail" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
             </div>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Mot de passe</p>
-                <input name="npassword" type="password" class="rounded-xl h-[40px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
+                <input name="npassword" type="password" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
             </div>
 
             <div class="flex justify-center flex-col">
@@ -73,12 +86,12 @@
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Télephone</p>
-                <input name="tele" type="text" class="rounded-xl h-[40px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
+                <input name="tele" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
             </div>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">CIN</p>
-                <input name="cin" type="text" class="rounded-xl h-[40px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
+                <input name="cin" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto">
             </div>
 
             <div class="text-right">

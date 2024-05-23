@@ -3,7 +3,7 @@ class UserModel {
     private $db;
 
     public function __construct() {
-        $this->db = new mysqli('localhost', 'root', '', 'pharmacie', 3306);
+        $this->db = new mysqli('localhost', 'root', '', 'pharmaciedatabase', 3308);
 
         if ($this->db->connect_error) {
             die('Connection failed: ' . $this->db->connect_error);

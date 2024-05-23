@@ -11,7 +11,7 @@
 
 
 </head>
-<body class="flex items-center">
+<body class="flex items-center " style="background-color:white">
 
     <div class="mx-auto bg-[rgb(234,245,249)] p-4 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl h-[500px] mt-[100px] mb-[100px] xl:w-[600px] sm:w-[450px] w-[440px]">
         <form method="post" action="signController.php">
