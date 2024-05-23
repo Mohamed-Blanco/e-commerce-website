@@ -25,7 +25,8 @@ include '../NAVBAR/navbarview.php'
         font-weight: 400;
         font-style: normal;
     }
-    .pulse:hover{
+
+    .pulse:hover {
         background-color: #17A841;
     }
 </style>
@@ -35,12 +36,17 @@ include '../NAVBAR/navbarview.php'
 
     <div class="md:flex m-10 md:justify-between">
         <span class="shrink-0 px-6 poppins font-bold text-2xl">Nouveaux produits du mois : </span>
-        <a href="http://" class="  "><button class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
+        <a href="http://" class="  "><button
+                class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
                     class="text-white fa-solid fa-arrow-right  "> </i></button></a>
     </div>
 
     <?php include 'Carousel2.php' ?>
-    
+    <div class="mt-8 mb-8 flex-row md:flex justify-center gap-16  ">
+            <?php include 'Shopnow.html' ?>
+            <?php include 'Shopnow.html' ?>
+    </div>
+
 
 </body>
 

@@ -16,19 +16,24 @@
             transition: transform 0.5s ease;
         }
         .slide {
-            flex: 0 0 25.33%; 
+            flex: 0 0 25.33%;
             box-sizing: border-box;
             text-align: center;
-            padding: 0px; 
-            margin: 0; 
+            padding: 0;
+            margin: 0;
         }
         .arrow {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            color: white;
-            padding: 10px;
+            font-size: 2rem;
             cursor: pointer;
+            
+            
+            border-radius: 50%;
+            padding: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 10;
         }
         .arrow.left {
             left: 10px;
@@ -36,14 +41,9 @@
         .arrow.right {
             right: 10px;
         }
-
-        /* Media query pour afficher une seule catégorie sur les petits écrans */
-        @media (max-width: 640px) {
-            .slides-container {
-                flex-wrap: nowrap; /* Empêche le débordement de contenu */
-            }
+        @media (max-width: 768px) {
             .slide {
-                flex: 0 0 100%; /* Une catégorie occupe toute la largeur */
+                flex: 0 0 100%;
             }
         }
     </style>
@@ -52,55 +52,65 @@
 <div class="relative w-full">
     <div class="carousel-container">
         <div class="flex slides-container">
-            <!-- Slides are duplicated for infinite effect -->
             <div class="slide">
-                <a href="page_categorie1.html">
-                    <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 1">
-                    <div class="text-xs">Product 1</div>
-                </a>
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 1">
+                <div class="text-xs">Product 1</div>
             </div>
             <div class="slide">
-                <a href="page_categorie1.html">
-                    <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 1">
-                    <div class="text-xs">Product 1</div>
-                </a>
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 2">
+                <div class="text-xs">Product 2</div>
             </div>
             <div class="slide">
-                <a href="page_categorie1.html">
-                    <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 1">
-                    <div class="text-xs">Product 1</div>
-                </a>
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 3">
+                <div class="text-xs">Product 3</div>
             </div>
             <div class="slide">
-                <a href="page_categorie1.html">
-                    <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 1">
-                    <div class="text-xs">Product 1</div>
-                </a>
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 4">
+                <div class="text-xs">Product 4</div>
             </div>
             <div class="slide">
-                <a href="page_categorie1.html">
-                    <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 1">
-                    <div class="text-xs">Product 1</div>
-                </a>
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 5">
+                <div class="text-xs">Product 5</div>
             </div>
             <div class="slide">
-                <a href="page_categorie1.html">
-                    <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 1">
-                    <div class="text-xs">Product 1</div>
-                </a>
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 6">
+                <div class="text-xs">Product 6</div>
             </div>
-            <!-- Ajoutez ici les autres catégories -->
+            <div class="slide">
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 1">
+                <div class="text-xs">Product 1</div>
+            </div>
+            <div class="slide">
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 2">
+                <div class="text-xs">Product 2</div>
+            </div>
+            <div class="slide">
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 3">
+                <div class="text-xs">Product 3</div>
+            </div>
+            <div class="slide">
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 4">
+                <div class="text-xs">Product 4</div>
+            </div>
+            <div class="slide">
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 5">
+                <div class="text-xs">Product 5</div>
+            </div>
+            <div class="slide">
+                <img class="object-cover w-24 h-24 mx-auto mb-1 rounded-full" src="https://via.placeholder.com/100" alt="Product 6">
+                <div class="text-xs">Product 6</div>
+            </div>
         </div>
     </div>
-    <a href="#" class="font-bold text-white arrow left" onclick="moveSlider('prev')">&#9664;</a>
-    <a href="#" class="font-bold text-white arrow right" onclick="moveSlider('next')">&#9654;</a>
+    <div class="arrow left" onclick="moveSlider('prev')">&#9664;</div>
+    <div class="arrow right" onclick="moveSlider('next')">&#9654;</div>
 </div>
 
 <script>
     const slidesContainer = document.querySelector('.slides-container');
-    const slideWidth = document.querySelector('.slide').offsetWidth;
+    let slideWidth = document.querySelector('.slide').offsetWidth;
     let currentSlide = 0;
-    const totalSlides = slidesContainer.children.length / 2; // Adjusted for duplicated slides
+    const totalSlides = slidesContainer.children.length / 2; 
 
     function moveSlider(direction) {
         if (direction === 'next') {
@@ -128,7 +138,7 @@
 
     function autoMoveSlider() {
         moveSlider('next');
-        setTimeout(autoMoveSlider, 5000); // Change slide every 5 seconds
+        setTimeout(autoMoveSlider, 5000); 
     }
 
     autoMoveSlider();
@@ -142,6 +152,7 @@
     });
 
     window.addEventListener('resize', () => {
+        slideWidth = document.querySelector('.slide').offsetWidth;
         slidesContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
     });
 </script>
