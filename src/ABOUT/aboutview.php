@@ -29,7 +29,7 @@
     </div>
     <div class="px-16 p-5">
         <p class = " text-black font-bold ml-5 mb-4 pt-4 p-5" >ABOUT US SECTION</p>
-        <p class="ml-12 text-gray-600 text-base pr-64 mt-7 ">Mais je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte rendu complet du système, en exposant les véritables enseignements du grand explorateur de la vérité, le maître bâtisseur de l'humanité. Tout cela, juste ici, sur Pharma.</p>
+        <p class="mt-6 text-base leading-relaxed text-gray-600">Mais je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte rendu complet du système, en exposant les véritables enseignements du grand explorateur de la vérité, le maître bâtisseur de l'humanité. Tout cela, juste ici, sur Pharma.</p>
     </div>    
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pt-14">
