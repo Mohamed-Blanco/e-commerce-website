@@ -49,8 +49,9 @@
     <div class="flex justify-center">
         <div class="w-full p-4 ">
             <div class="relative">
-                <button id="filterButton" class="flex items-center px-4 py-2 mb-4 text-black bg-gray-200 rounded-full md:hidden">
-                    <img src="../../images/2.png" class="w-6 h-6 mr-2" alt="Filtrer"> Filtrer
+                <button id="filterButton" class="mr-96 md:mr-0 flex items-center px-4 py-2 mb-4 text-black bg-gray-200 rounded-full md:hidden">
+                    <img src="../../images/2.png" alt="">
+                    <p class="flex justify-center items-center gap-2"><i class=" fa-solid fa-sliders"></i>Filtrer</p>
                 </button>
                 <div id="filterMenu" class="absolute top-0 left-0 z-10 flex-col hidden w-full bg-white md:flex md:flex-row md:relative md:w-auto">
                     <div class="p-4 mt-5 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0 ">
