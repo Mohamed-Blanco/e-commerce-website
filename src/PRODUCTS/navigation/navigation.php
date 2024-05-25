@@ -60,7 +60,7 @@
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 300px; /* Fixed width for smaller screens */
+                width: 300px; 
                 height: 100%;
                 background: white;
                 z-index: 30;
