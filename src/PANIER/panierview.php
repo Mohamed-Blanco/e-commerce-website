@@ -72,11 +72,11 @@ include '../NAVBAR/navbarview.php'
     <table class="w-full md:w-3/5 text-left shadow-lg rounded-lg table-mobile">
     <thead class="h-32">
         <tr class="text-xs text-center text-gray-500 bg-gray-50 uppercase border-b">
-            <th class="px-4 py-3">Product</th>
-            <th class="px-4 py-3">Price</th>
-            <th class="px-4 py-3">Quantity</th>
-            <th class="px-4 py-3">Subtotal</th>
-            <th class="px-4 py-3">Remove</th>
+            <th class="px-4 py-3">Produit</th>
+            <th class="px-4 py-3">Prix</th>
+            <th class="px-4 py-3">Quantité</th>
+            <th class="px-4 py-3">Subtotale</th>
+            <th class="px-4 py-3">supprimer</th>
         </tr>
     </thead>
     <tbody class="h-28">
@@ -110,7 +110,7 @@ include '../NAVBAR/navbarview.php'
         <table class="w-full md:w-1/3 md:mr-5 mt-5 md:mt-0 text-left shadow-lg rounded-lg">
             <thead class="h-16">
                 <tr class="text-xs text-center text-gray-500 bg-gray-50 uppercase border-b">
-                    <th class="px-4 py-3">Cart totals</th>
+                    <th class="px-4 py-3">Totaux du panier</th>
                     <th class="px-4 py-3"></th>
                 </tr>
             </thead>
