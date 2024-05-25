@@ -22,11 +22,17 @@ session_start();
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> .poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
     <title>Login</title>
 
     <link href="../output.css" rel="stylesheet">
 </head>
-<body class="flex items-center justify-center" style="background-color:white">
+<body class="poppins  flex items-center justify-center" style="background-color:white">
 
     <div class="flex items-center justify-center flex-col mx-auto bg-[rgb(234,245,249)] p-4 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl h-[500px] mt-[100px] mb-[100px] xl:w-[600px] sm:w-[450px] w-[440px]">
         <form method="post" action="signController.php" class="flex flex-col items-center w-full">

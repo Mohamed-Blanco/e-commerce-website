@@ -27,10 +27,8 @@ class UserModel {
         $stmt->close();
         
         if ($result->num_rows > 0) {
-            echo "lllll";
             return true;
         } else {
-            echo "0 results";
             return false;
         }
         
@@ -39,11 +37,11 @@ class UserModel {
 }
 
 
-public function adduser($prenom,$nom,$email,$password,$tele,$cin,$date) {
-    $sql='insert into utilisateur(Nom,Mpasse,Email,Tel,CIN,Prénom,DN) values(?,?,?,?,?,?,?)';
+public function adduser($prenom,$nom,$email,$password,$tele,$date,$sexe,$age,$adress) {
+    $sql='insert into client(Nomc,passwordc,emailc,Telc,Prénom,datenss,sexe,age,adress) values(?,?,?,?,?,?,?,?,?)';
     $stmt = $this->db->prepare($sql);
 
-    $stmt->bind_param("sssssss",$nom,$password,$email,$tele,$cin,$prenom,$date);
+    $stmt->bind_param("sssssssis",$nom,$password,$email,$tele,$prenom,$date,$sexe,$age,$adress);
 
 
 

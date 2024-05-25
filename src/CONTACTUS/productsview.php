@@ -1,5 +1,11 @@
 <?php 
-    include '../NAVBAR/navbarview.php'
+session_start();
+    include '../NAVBAR/navbarview.php';
+    if(isset($_SESSION["nom"])){
+        echo "<script>alert('email has been sended ')</script>";
+        unset($_SESSION["nom"]);
+        
+    }
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +16,11 @@
     <title>Document</title>
 </head>
 <body>
-        <p class = "text-black" >CONTACT US SECTION</p>
+        <?php
+include 'C:\xampp\htdocs\ProjectWebPharmacie\src\CONTACTUS\conta\contact.php';
+?>
 </body>
 </html>
+<?php
+include '../Footer/Footerview.php';
+?>
