@@ -12,7 +12,7 @@ class UserModel {
     
 
     public function verify($email, $password) {
-        $sql='select Email, Mpasse from utilisateur where Email=? and Mpasse=?';
+        $sql='select emailc, passwordc from client where emailc=? and passwordc=?';
         $stmt = $this->db->prepare($sql);
 
         $stmt->bind_param("ss", $email,$password);
