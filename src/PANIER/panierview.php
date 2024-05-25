@@ -72,16 +72,16 @@ include '../NAVBAR/navbarview.php'
     <table class="w-full md:w-3/5 text-left shadow-lg rounded-lg table-mobile">
     <thead class="h-32">
         <tr class="text-xs text-center text-gray-500 bg-gray-50 uppercase border-b">
-            <th class="px-4 py-3">Product</th>
-            <th class="px-4 py-3">Price</th>
-            <th class="px-4 py-3">Quantity</th>
-            <th class="px-4 py-3">Subtotal</th>
-            <th class="px-4 py-3">Remove</th>
+            <th class="px-4 py-3">Produit</th>
+            <th class="px-4 py-3">Prix</th>
+            <th class="px-4 py-3">Quantité</th>
+            <th class="px-4 py-3">Subtotale</th>
+            <th class="px-4 py-3">supprimer</th>
         </tr>
     </thead>
     <tbody class="h-28">
         <tr class="text-gray-700 text-center">
-            <td class="px-4 py-3" data-label="Product:">
+            <td class="px-4 py-3" data-label="Produit:">
                 <div class="flex items-center gap-1.5">
                     <div class="flex-shrink-0 w-10 h-10">
                         <img class="w-full h-full rounded-full" src="../images/dolip.jpg" alt="product image" />
@@ -92,12 +92,12 @@ include '../NAVBAR/navbarview.php'
                     </div>
                 </div>
             </td>
-            <td class="px-4 py-3 text-sm" data-label="Price:">$20.00</td>
-            <td class="px-4 py-3 text-sm" data-label="Quantity:">
+            <td class="px-4 py-3 text-sm" data-label="Prix:">$20.00</td>
+            <td class="px-4 py-3 text-sm" data-label="Quantité:">
                 <input style="background-color:white" type="number" value="2" min="1" class="w-16 text-center rounded border appearance-none">
             </td>
             <td class="px-4 py-3 text-sm" data-label="Subtotal:">$40.00</td>
-            <td class="px-4 py-3 text-sm" data-label="Remove:">
+            <td class="px-4 py-3 text-sm" data-label="Supprimer:">
                 <button class="p-2 rounded-full hover:bg-red-100 border border-transparent hover:border-red-500 text-red-500 hover:text-red-600 remove-button">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -110,7 +110,7 @@ include '../NAVBAR/navbarview.php'
         <table class="w-full md:w-1/3 md:mr-5 mt-5 md:mt-0 text-left shadow-lg rounded-lg">
             <thead class="h-16">
                 <tr class="text-xs text-center text-gray-500 bg-gray-50 uppercase border-b">
-                    <th class="px-4 py-3">Cart totals</th>
+                    <th class="px-4 py-3">Totaux du panier</th>
                     <th class="px-4 py-3"></th>
                 </tr>
             </thead>
@@ -126,8 +126,8 @@ include '../NAVBAR/navbarview.php'
                 <tr>
                     <th class="px-7">
                         <div class="flex flex-col space-y-4">
-                            <a href="/checkout" class="bg-amber-600 text-white font-bold py-2 rounded-full text-center hover:bg-amber-700">Proceed to checkout</a>
-                            <a href="../PRODUCTS/productsview.php" class="bg-gray-200 text-gray-800 font-bold py-2 rounded-full text-center hover:bg-gray-300">Continue Shopping</a>
+                            <a href="/checkout" class="bg-amber-600 text-white font-bold py-2 rounded-full text-center hover:bg-amber-700">Passez à checkout</a>
+                            <a href="../PRODUCTS/productsview.php" class="bg-gray-200 text-gray-800 font-bold py-2 rounded-full text-center hover:bg-gray-300">Continuer Shopping</a>
                         </div>
                     </th>
                 </tr>
