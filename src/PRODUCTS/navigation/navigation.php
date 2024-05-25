@@ -42,19 +42,51 @@
             background-color: #1D4ED8; 
             color: white;
         }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 20;
+        }
+        .filter-menu-open {
+            display: block !important;
+        }
+        @media (max-width: 768px) {
+            #filterMenu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 300px; /* Fixed width for smaller screens */
+                height: 100%;
+                background: white;
+                z-index: 30;
+                overflow-y: auto;
+                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            }
+        }
+        @media (min-width: 769px) {
+            #filterMenu {
+                position: static;
+                width: 300px;
+            }
+        }
     </style>
 </head>
 <body class="poppins">
-
-    <div class="flex justify-center">
-        <div class="w-full p-4 ">
+    <div class="overlay" id="overlay"></div>
+    <div class="ml-5 flex justify-start">
+        <div class="w-full p-4">
             <div class="relative">
-                <button id="filterButton" class="mr-96 md:mr-0 flex items-center px-4 py-2 mb-4 text-black bg-gray-200 rounded-full md:hidden">
+                <button id="filterButton" class="flex items-center px-4 py-2 mb-4 text-black bg-gray-200 rounded-full md:mr-0 md:hidden">
                     <img src="../../images/2.png" alt="">
-                    <p class="flex justify-center items-center gap-2"><i class=" fa-solid fa-sliders"></i>Filtrer</p>
+                    <p class="flex items-center justify-center gap-2"><i class=" fa-solid fa-sliders"></i>Filtrer</p>
                 </button>
                 <div id="filterMenu" class="absolute top-0 left-0 z-10 flex-col hidden w-full bg-white md:flex md:flex-row md:relative md:w-auto">
-                    <div class="p-4 mt-5 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0 ">
+                    <div class="p-4 mt-5 mb-4 border border-gray-200 rounded-md bg-gray-50 md:mb-0">
                         <div class="flex items-center justify-between mb-4">
                             <h2 class="text-2xl font-semibold text-black">Product categories</h2>
                             <button id="closeButton" class="text-black md:hidden">✖</button>
@@ -97,25 +129,29 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
-
     <script>
         const filterButton = document.getElementById('filterButton');
         const filterMenu = document.getElementById('filterMenu');
         const closeButton = document.getElementById('closeButton');
+        const overlay = document.getElementById('overlay');
 
         filterButton.addEventListener('click', () => {
-            filterMenu.classList.toggle('hidden');
-            filterButton.classList.toggle('hidden');
+            filterMenu.classList.remove('hidden');
+            overlay.classList.add('filter-menu-open');
         });
 
         closeButton.addEventListener('click', () => {
             filterMenu.classList.add('hidden');
-            filterButton.classList.remove('hidden');
+            overlay.classList.remove('filter-menu-open');
+        });
+
+        overlay.addEventListener('click', () => {
+            filterMenu.classList.add('hidden');
+            overlay.classList.remove('filter-menu-open');
         });
     </script>
 </body>

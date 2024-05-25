@@ -791,6 +791,11 @@ html {
 }
 
 @media (hover:hover) {
+  .label a:hover {
+    --tw-text-opacity: 1;
+    color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+  }
+
   .menu li > *:not(ul, .menu-title, details, .btn):active,
 .menu li > *:not(ul, .menu-title, details, .btn).active,
 .menu li > details > summary:active {
@@ -1010,6 +1015,19 @@ html {
   }
 }
 
+.label {
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .indicator {
   position: relative;
   display: inline-flex;
@@ -1209,6 +1227,18 @@ html {
 :root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
   overflow: hidden;
   scrollbar-gutter: stable;
+}
+
+.progress {
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  overflow: hidden;
+  height: 0.5rem;
+  border-radius: var(--rounded-box, 1rem);
+  background-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 
 .radio {
@@ -1494,6 +1524,11 @@ input.tab:checked + .tab-content,
   --tw-bg-opacity: 0.1;
   color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
   --tw-text-opacity: 0.2;
+}
+
+.btm-nav > * .label {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 @keyframes button-pop {
@@ -1906,6 +1941,51 @@ details.collapse summary::-webkit-details-marker {
   0% {
     opacity: 0;
   }
+}
+
+.progress::-moz-progress-bar {
+  border-radius: var(--rounded-box, 1rem);
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
+}
+
+.progress:indeterminate {
+  --progress-color: var(--fallback-bc,oklch(var(--bc)/1));
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--progress-color) -1%,
+    var(--progress-color) 10%,
+    transparent 10%,
+    transparent 90%
+  );
+  background-size: 200%;
+  background-position-x: 15%;
+  animation: progress-loading 5s ease-in-out infinite;
+}
+
+.progress::-webkit-progress-bar {
+  border-radius: var(--rounded-box, 1rem);
+  background-color: transparent;
+}
+
+.progress::-webkit-progress-value {
+  border-radius: var(--rounded-box, 1rem);
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
+}
+
+.progress:indeterminate::-moz-progress-bar {
+  background-color: transparent;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--progress-color) -1%,
+    var(--progress-color) 10%,
+    transparent 10%,
+    transparent 90%
+  );
+  background-size: 200%;
+  background-position-x: 15%;
+  animation: progress-loading 5s ease-in-out infinite;
 }
 
 @keyframes progress-loading {
@@ -2640,6 +2720,40 @@ details.collapse summary::-webkit-details-marker {
   bottom: var(--tooltip-offset);
 }
 
+.avatar.online:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  display: block;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-su,oklch(var(--su)/var(--tw-bg-opacity)));
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: var(--fallback-b1,oklch(var(--b1)/1));
+  width: 15%;
+  height: 15%;
+  top: 7%;
+  right: 7%;
+}
+
+.avatar.offline:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  display: block;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: var(--fallback-b1,oklch(var(--b1)/1));
+  width: 15%;
+  height: 15%;
+  top: 7%;
+  right: 7%;
+}
+
 .join.join-vertical > :where(*:not(:first-child)) {
   margin-left: 0px;
   margin-right: 0px;
@@ -2954,10 +3068,6 @@ details.collapse summary::-webkit-details-marker {
   margin-left: 2.5rem;
 }
 
-.ml-12 {
-  margin-left: 3rem;
-}
-
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -2982,12 +3092,12 @@ details.collapse summary::-webkit-details-marker {
   margin-right: 2.5rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mr-5 {
   margin-right: 1.25rem;
+}
+
+.mr-96 {
+  margin-right: 24rem;
 }
 
 .mr-\[10px\] {
@@ -3022,10 +3132,6 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 1.5rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -3048,18 +3154,6 @@ details.collapse summary::-webkit-details-marker {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.mr-64 {
-  margin-right: 16rem;
-}
-
-.mr-96 {
-  margin-right: 24rem;
 }
 
 .block {
@@ -3709,6 +3803,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.bg-blue-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -3769,6 +3868,10 @@ details.collapse summary::-webkit-details-marker {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-16 {
@@ -3877,10 +3980,6 @@ details.collapse summary::-webkit-details-marker {
 
 .pr-5 {
   padding-right: 1.25rem;
-}
-
-.pr-64 {
-  padding-right: 16rem;
 }
 
 .pt-12 {
@@ -4130,6 +4229,10 @@ details.collapse summary::-webkit-details-marker {
   transition-duration: 1000ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .duration-500 {
   transition-duration: 500ms;
 }
@@ -4144,6 +4247,18 @@ details.collapse summary::-webkit-details-marker {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.\[hostname\:port\] {
+  hostname: port;
+}
+
+.hover\:h-12:hover {
+  height: 3rem;
+}
+
+.hover\:w-12:hover {
+  width: 3rem;
 }
 
 .hover\:border-gray-300:hover {
@@ -4191,6 +4306,16 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:text-2xl:hover {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .hover\:text-blue-500:hover {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -4199,11 +4324,6 @@ details.collapse summary::-webkit-details-marker {
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
-.hover\:text-cyan-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(6 182 212 / var(--tw-text-opacity));
 }
 
 .hover\:text-gray-600:hover {
@@ -4219,6 +4339,11 @@ details.collapse summary::-webkit-details-marker {
 .hover\:text-green-500:hover {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.hover\:text-red-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .hover\:text-red-600:hover {
@@ -4361,6 +4486,10 @@ details.collapse summary::-webkit-details-marker {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
   .sm\:items-center {
     align-items: center;
   }
@@ -4411,16 +4540,16 @@ details.collapse summary::-webkit-details-marker {
     margin-bottom: 0px;
   }
 
-  .md\:ml-5 {
-    margin-left: 1.25rem;
+  .md\:mr-0 {
+    margin-right: 0px;
   }
 
   .md\:mr-5 {
     margin-right: 1.25rem;
   }
 
-  .md\:mr-0 {
-    margin-right: 0px;
+  .md\:mt-0 {
+    margin-top: 0px;
   }
 
   .md\:block {
@@ -4471,6 +4600,10 @@ details.collapse summary::-webkit-details-marker {
     grid-template-columns: subgrid;
   }
 
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .md\:grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
@@ -4481,10 +4614,6 @@ details.collapse summary::-webkit-details-marker {
 
   .md\:items-start {
     align-items: flex-start;
-  }
-
-  .md\:items-end {
-    align-items: flex-end;
   }
 
   .md\:items-center {
@@ -4502,10 +4631,6 @@ details.collapse summary::-webkit-details-marker {
 
   .md\:pl-5 {
     padding-left: 1.25rem;
-  }
-
-  .md\:opacity-0 {
-    opacity: 0;
   }
 
   .md\:opacity-100 {

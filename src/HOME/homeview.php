@@ -44,7 +44,7 @@ include '../NAVBAR/navbarview.php'
     <?php include 'Carousel2.php' ?>
     <div class="mt-8 mb-8 flex-row md:flex justify-center gap-16  ">
             <?php include 'Shopnow.html' ?>
-            <?php include 'Shopnow.html' ?>
+            <?php include 'Shopnow2.html' ?>
     </div>
 
 
