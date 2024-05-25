@@ -78,7 +78,7 @@
 </head>
 <body class="poppins">
     <div class="overlay" id="overlay"></div>
-    <div class="flex justify-start">
+    <div class="ml-5 flex justify-start">
         <div class="w-full p-4">
             <div class="relative">
                 <button id="filterButton" class="flex items-center px-4 py-2 mb-4 text-black bg-gray-200 rounded-full md:mr-0 md:hidden">

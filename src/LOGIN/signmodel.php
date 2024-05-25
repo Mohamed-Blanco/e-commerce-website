@@ -3,7 +3,7 @@ class UserModel {
     private $db;
 
     public function __construct() {
-        $this->db = new mysqli('localhost', 'root', '', 'pharmaciedatabase', 3308);
+        $this->db = new mysqli('localhost', 'root', '', 'pharmacie', 3306);
 
         if ($this->db->connect_error) {
             die('Connection failed: ' . $this->db->connect_error);
@@ -12,7 +12,7 @@ class UserModel {
     
 
     public function verify($email, $password) {
-        $sql='select Email, Mpasse from utilisateur where Email=? and Mpasse=?';
+        $sql='select emailc, passwordc from client where emailc=? and passwordc=?';
         $stmt = $this->db->prepare($sql);
 
         $stmt->bind_param("ss", $email,$password);
@@ -27,10 +27,8 @@ class UserModel {
         $stmt->close();
         
         if ($result->num_rows > 0) {
-            echo "lllll";
             return true;
         } else {
-            echo "0 results";
             return false;
         }
         
@@ -39,11 +37,11 @@ class UserModel {
 }
 
 
-public function adduser($prenom,$nom,$email,$password,$tele,$cin,$date) {
-    $sql='insert into utilisateur(Nom,Mpasse,Email,Tel,CIN,Prénom,DN) values(?,?,?,?,?,?,?)';
+public function adduser($prenom,$nom,$email,$password,$tele,$date,$sexe,$age,$adress) {
+    $sql='insert into client(Nomc,passwordc,emailc,Telc,Prénom,datenss,sexe,age,adress) values(?,?,?,?,?,?,?,?,?)';
     $stmt = $this->db->prepare($sql);
 
-    $stmt->bind_param("sssssss",$nom,$password,$email,$tele,$cin,$prenom,$date);
+    $stmt->bind_param("sssssssis",$nom,$password,$email,$tele,$prenom,$date,$sexe,$age,$adress);
 
 
 
