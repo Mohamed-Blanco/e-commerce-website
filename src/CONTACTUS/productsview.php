@@ -4,7 +4,6 @@ session_start();
     if(isset($_SESSION["nom"])){
         echo "<script>alert('email has been sended ')</script>";
         unset($_SESSION["nom"]);
-        
     }
 ?>
 

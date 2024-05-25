@@ -31,13 +31,14 @@
             <p class ="pl-5 hover:text-green-500 text-black duration-500"  >En raison de l'épidémie de COVID-19, les commandes peuvent être traitées avec un léger retard.
 
 Recommandez </p>
-            <div class="pr-5 "><a href="../LOGIN/login.php" class="text-black mr-5  duration-500"><i class="fa-regular fa-user hover:text-green-500 duration-500"></i> Login / Register</a><a href="" class="text-black hover:text-green-500 duration-500"><i class="hover:text-green-500 duration-500 mr-5 fa-solid fa-heart text-black"></i>Favories </a></div>
+            <div class="pr-5 "><a href="../LOGIN/login.php" class="text-black mr-5  duration-500"><i class="fa-regular fa-user hover:text-green-500 duration-500"></i> Login / Register</a><a href="../FAVORIES/favoriesview.php" class="text-black hover:text-green-500 duration-500"><i class="hover:text-green-500 duration-500 mr-5 fa-solid fa-heart text-black"></i>Favories </a></div>
             
         </nav>
         <nav class=" ml-8 md:pl-5  pr-5 p-2 bg-white  md:flex md:items-center  justify-between" >
             
             <div class="flex justify-between ">
-                <img src="../images/LogoPharma.png" class="h-16 inline mr-10" ></img>
+                <a href="../HOME/homeview.php"><img src="../images/LogoPharma.png" class="h-16 inline mr-10" ></img></a>
+                
                 
                 <span class=" md:hidden self-center pr-5">
                 <i id="menu" name="Menu" onclick="Menu(this)" class="text-xl text-black fa-solid fa-bars "></i>
@@ -56,7 +57,7 @@ Recommandez </p>
                     <a href="../ABOUT/aboutview.php" class=" text-black hover:text-green-500 duration-500 " >About Us</a>
                 </li>
                 <li class="mx-8">
-                    <a href="../CONTACT/conta/contact.php" class=" text-black hover:text-green-500 duration-500 " >Contact Us</a>
+                    <a href="../CONTACTUS/conta/contact.php" class=" text-black hover:text-green-500 duration-500 " >Contact Us</a>
                 </li>
                 <li class="mx-8 md:hidden ">
                 <a href="../PANIER/panierview.php" class=" text-black hover:text-green-500 duration-500 " >Panier</a>

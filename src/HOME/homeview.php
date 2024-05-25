@@ -48,8 +48,18 @@ include '../NAVBAR/navbarview.php'
     </div>
 
     <div>
-    <?php include 'slider.php' ?>
+    <?php include 'slider.html' ?>
     </div>
+    <div class="md:flex m-10 md:justify-between">
+        <span class="shrink-0 px-6 poppins font-bold text-2xl">les Produits les plus vendues : </span>
+        <a href="http://" class="  "><button
+                class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
+                    class="text-white fa-solid fa-arrow-right  "> </i></button></a>
+    </div>
+
+    <div class=""><?php include 'Produitsplus.php' ?></div>
+
+    
 </body>
 
 </html>
