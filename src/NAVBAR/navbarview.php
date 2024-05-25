@@ -29,7 +29,7 @@
             <p class ="pl-5 hover:text-green-500 text-black duration-500"  >En raison de l'épidémie de COVID-19, les commandes peuvent être traitées avec un léger retard.
 
 Recommandez </p>
-            <div class="pr-5 "><a href="" class="text-black mr-5  duration-500"><i class="fa-regular fa-user hover:text-green-500 duration-500"></i> Login / Register</a><a href="" class="text-black hover:text-green-500 duration-500"><i class="hover:text-green-500 duration-500 mr-5 fa-solid fa-heart text-black"></i>Favories </a></div>
+            <div class="pr-5 "><a href="../LOGIN/login.php" class="text-black mr-5  duration-500"><i class="fa-regular fa-user hover:text-green-500 duration-500"></i> Login / Register</a><a href="" class="text-black hover:text-green-500 duration-500"><i class="hover:text-green-500 duration-500 mr-5 fa-solid fa-heart text-black"></i>Favories </a></div>
             
         </nav>
         <nav class="ml-8 md:pl-5 pr-5 p-2 bg-white  md:flex md:items-center  justify-between" >
@@ -57,7 +57,7 @@ Recommandez </p>
                     <a href="#" class=" text-black hover:text-green-500 duration-500 " >Contact Us</a>
                 </li>
                 <li class="mx-8 md:hidden ">
-                <a href="#" class=" text-black hover:text-green-500 duration-500 " ></i>Panier</a>
+                <a href="../PANIER/panierview.php" class=" text-black hover:text-green-500 duration-500 " >Panier</a>
 
                 </li>
             </ul>

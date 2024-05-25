@@ -3,7 +3,7 @@ class UserModel {
     private $db;
 
     public function __construct() {
-        $this->db = new mysqli('localhost', 'root', '', 'pharmaciedatabase', 3308);
+        $this->db = new mysqli('localhost', 'root', '', 'pharmacie', 3306);
 
         if ($this->db->connect_error) {
             die('Connection failed: ' . $this->db->connect_error);
@@ -12,7 +12,7 @@ class UserModel {
     
 
     public function verify($email, $password) {
-        $sql='select Email, Mpasse from utilisateur where Email=? and Mpasse=?';
+        $sql='select emailc, passwordc from client where emailc=? and passwordc=?';
         $stmt = $this->db->prepare($sql);
 
         $stmt->bind_param("ss", $email,$password);

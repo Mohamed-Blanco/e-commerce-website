@@ -12,14 +12,14 @@ include '../NAVBAR/navbarview.php'
 </head>
 
 <body class="" style="background-color : white;">
-    <div class="bg-green-100 p-5">
+    <div class="p-5 bg-green-100">
         <ul id="slidedown" class="flex-row">
-            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Shop</li>
+            <li class="mt-5 mb-2 text-2xl text-center text-black text-bold">Shop</li>
             <li class="mb-5 text-center text-bold "><span>Home </span> <span class="text-black text-bold"><i
                         class="fa-solid fa-caret-right"></i> Shop</span></li>
         </ul>
     </div>
-    <div class="flex flex-col md:flex-row justify-center  md:items-start items-center">
+    <div class="flex flex-col items-center justify-center md:flex-row md:items-start">
         
         <div >
             <?php include '../PRODUCTS/navigation/navigation.php'; ?>
