@@ -67,27 +67,27 @@ session_start();
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px] ">Prénom <span class="text-red-500">*</span></p>
-                <input value="<?=$prenom?>" name="prenom" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input value="<?=$prenom?>" name="prenom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il ne doit contenir que des alphabets et chiffres de 3 a 20</p>
 
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Nom <span class="text-red-500">*</span></p>
-                <input value="<?=$nom?>" name="nom" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input value="<?=$nom?>" name="nom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il ne doit contenir que des alphabets et chiffres de 3 a 20</p>
 
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Email <span class="text-red-500">*</span></p>
-                <input value="<?=$nemail?>" name="nemail" type="email" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input value="<?=$nemail?>" name="nemail" type="email" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
 
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Mot de passe <span class="text-red-500">*</span></p>
-                <input value="<?=$npassword?>" name="npassword" type="password" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input value="<?=$npassword?>" name="npassword" type="password" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">chiffres de 3 a 10</p>
 
@@ -95,20 +95,20 @@ session_start();
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Date de naissance <span class="text-red-500">*</span></p>
-                <input value="<?=$date?>" name="date" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" placeholder="dd/mm/yyyy" required>
+                <input value="<?=$date?>" name="date" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" placeholder="dd/mm/yyyy" required>
 
             </div>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Télephone</p>
-                <input value="<?=$tele?>" name="tele" type="tel" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]">
+                <input value="<?=$tele?>" name="tele" type="tel" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]">
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il doit etre 10 numero</p>
 
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">CIN<span class="text-red-500">*</span></p>
-                <input value="<?=$cin?>" name="cin" type="text" class="rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input value="<?=$cin?>" name="cin" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il doit etre 6 charachteres</p>
 

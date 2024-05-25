@@ -34,10 +34,10 @@ session_start();
             <div class="h-[1px] bg-[rgb(210,220,224)] w-[500px] mx-auto"></div>
 
             <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px] self-start">Email</p>
-            <input value="<?=$email?>" name="email" type="email" class="rounded-3xl h-[40px] px-[10px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px]" required>
+            <input value="<?=$email?>" name="email" type="email" class="bg-white text-black rounded-3xl h-[40px] px-[10px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px]" required>
 
             <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px] self-start">Mot de passe</p>
-            <input value="<?=$password?>" name="password" type="password" class="rounded-3xl h-[40px] px-[10px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px]" required>
+            <input value="<?=$password?>" name="password" type="password" class=" bg-white text-black rounded-3xl h-[40px] px-[10px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px]" required>
 
             <?php
             if(isset($_GET["try"])){
@@ -50,7 +50,7 @@ session_start();
             }
             ?>
             <div class="text-right self-end">
-                <button type="submit" class="bg-[rgb(39,197,143)] text-white h-[47px] w-[140px] rounded-tl-3xl rounded-br-3xl rounded-bl-3xl mt-[20px] mr-[30px] text-lg">Connexion</button>
+                <button type="submit" class="bg-[rgb(39,197,143)] text-white  h-[47px] w-[140px] rounded-tl-3xl rounded-br-3xl rounded-bl-3xl mt-[20px] mr-[30px] text-lg">Connexion</button>
             </div>
         </form>
         <div class="flex justify-center">
