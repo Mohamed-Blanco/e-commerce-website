@@ -45,27 +45,30 @@
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            width: 120px;
+            width: 230px;
             /* Fixed width */
+            height: 230px;
+            /* Hauteur des diapositives */
         }
 
         .im {
-            width: 100px;
-            height: 100px;
+            width: 170px;
+            height: 170px;
             object-fit: cover;
             border-radius: 50%;
+            margin-bottom: 10px;
+            /* Ajout d'un espace entre l'image et le texte */
         }
 
         .arrow {
             position: absolute;
-            top: 50%;
+            top: 40%;
             transform: translateY(-50%);
             font-size: 2rem;
             cursor: pointer;
-            background-color: white;
-            border-radius: 50%;
+            background-color: transparent;
+            /* Rend les flèches transparentes */
             padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .arrow.left {
@@ -145,8 +148,24 @@
             <!-- Plus d'éléments de la diapositive ici -->
         </div>
 
-        <div class="arrow left" onclick="moveSlider('prev')">&#9664;</div>
-        <div class="arrow right" onclick="moveSlider('next')">&#9654;</div>
+        <div class="arrow left" onclick="moveSlider('prev')"><span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="hidden">Anterior</span>
+            </span>
+        </div>
+        <div class="arrow right" onclick="moveSlider('next')"><span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="hidden">Siguiente</span>
+            </span>
+        </div>
     </div>
 
     <script>
