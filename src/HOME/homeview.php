@@ -47,7 +47,9 @@ include '../NAVBAR/navbarview.php'
             <?php include 'Shopnow2.html' ?>
     </div>
 
-
+    <div>
+    <?php include 'slider.php' ?>
+    </div>
 </body>
 
 </html>
