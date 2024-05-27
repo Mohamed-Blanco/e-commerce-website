@@ -1,6 +1,6 @@
 <?php 
 session_start();
-    include '../NAVBAR/navbarview.php';
+include '../NAVBAR/navbarcontroller.php';
 
     
 
@@ -33,7 +33,13 @@ session_start();
     <link href="../output.css" rel="stylesheet">
 </head>
 <body class="poppins  flex items-center justify-center" style="background-color:white">
-
+<div class="bg-green-100 p-5">
+        <ul id="slidedown" class="flex-rew">
+            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Login</li>
+            <li class="mb-5 text-center text-bold "><span>Home </span> <span class="text-black text-bold"><i
+                        class="fa-solid fa-caret-right"></i> Login</span></li>
+        </ul>
+    </div>
     <div class="flex items-center justify-center flex-col mx-auto bg-[rgb(234,245,249)] p-4 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl h-[500px] mt-[100px] mb-[100px] xl:w-[600px] sm:w-[450px] w-[440px]">
         <form method="post" action="signController.php" class="flex flex-col items-center w-full">
             <p class="font-bold text-center mt-[40px] mb-[20px]  text-[rgb(21,12,107)] text-3xl">Connectez-vous a votre compte</p>

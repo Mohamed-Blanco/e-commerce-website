@@ -4,7 +4,6 @@ session_start();
     if(isset($_SESSION["nom"])){
         echo "<script>alert('email has been sended ')</script>";
         unset($_SESSION["nom"]);
-        
     }
 ?>
 
@@ -13,6 +12,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" rel="stylesheet">
     <title>Contact Us</title>
     <style>
@@ -99,6 +99,32 @@ session_start();
            </div>
        </form>
    </div>
+=======
+    <title>Document</title>
+    <link href="../output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<style>
+    .circle {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%; /* This makes the element circular */
+        background-color: #17A841   ; /* Adjust color as needed */
+    }
+    .poppins{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+</style>
+<body style="background-color:white;" class="poppins">
+        <?php
+include 'C:\xampp\htdocs\ProjectWebPharmacie\src\CONTACTUS\conta\contact.php';
+?>
+>>>>>>> 8875b0c267902e93375c1e53d7bdbf46b50b76b6
 </body>
 </html>
 <?php
