@@ -69,7 +69,7 @@ include '../NAVBAR/navbarview.php'
     </div>
     <section class="mb-12">
     <div class="container mx-auto px-4 mt-10 flex flex-col sm:flex-col md:flex-row justify-between">
-    <table class="w-full md:w-3/5 text-left shadow-lg rounded-lg table-mobile">
+    <table class="w-full md:w-3/5 shadow-lg rounded-lg table-mobile">
     <thead class="h-32">
         <tr class="text-xs text-center text-gray-500 bg-gray-50 uppercase border-b">
             <th class="px-4 py-3">Produit</th>
