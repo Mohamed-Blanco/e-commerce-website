@@ -34,20 +34,32 @@ include '../NAVBAR/navbarview.php'
 <body>
     <?php include 'Carousel1.php' ?>
 
+    <div class="m-10 md:flex md:justify-between">
+        <span class="px-6 text-2xl font-bold shrink-0 poppins">Nouveaux produits du mois : </span>
+        <a href="http://" class=""><button
+                class="m-5 text-white bg-black rounded-full  md:m-0 w-28 h-9 poppins pulse">Voir Tout <i
+                    class="text-white fa-solid fa-arrow-right "> </i></button></a>
+    </div>
+
+    <?php include 'Carousel2.php' ?>
+    <div class="flex-row justify-center gap-16 mt-8 mb-8 md:flex ">
+            <?php include 'Shopnow.html' ?>
+            <?php include 'Shopnow2.html' ?>
+    </div>
+
+    <div>
+    <?php include 'slider.html' ?>
+    </div>
     <div class="md:flex m-10 md:justify-between">
-        <span class="shrink-0 px-6 poppins font-bold text-2xl">Nouveaux produits du mois : </span>
+        <span class="shrink-0 px-6 poppins font-bold text-2xl">les Produits les plus vendues : </span>
         <a href="http://" class="  "><button
                 class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
                     class="text-white fa-solid fa-arrow-right  "> </i></button></a>
     </div>
 
-    <?php include 'Carousel2.php' ?>
-    <div class="mt-8 mb-8 flex-row md:flex justify-center gap-16  ">
-            <?php include 'Shopnow.html' ?>
-            <?php include 'Shopnow2.html' ?>
-    </div>
+    <div class=""><?php include 'Produitsplus.php' ?></div>
 
-
+    
 </body>
 
 </html>
