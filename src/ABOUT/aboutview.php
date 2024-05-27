@@ -1,5 +1,5 @@
 <?php 
-    include '../NAVBAR/navbarview.php'
+    include '../NAVBAR/navbarcontroller.php';
 ?>
 
 <!DOCTYPE html>

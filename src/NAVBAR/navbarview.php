@@ -31,7 +31,7 @@
             <p class ="pl-5 hover:text-green-500 text-black duration-500"  >En raison de l'épidémie de COVID-19, les commandes peuvent être traitées avec un léger retard.
 
 Recommandez </p>
-            <div class="pr-5 "><a href="../LOGIN/login.php" class="text-black mr-5  duration-500"><i class="fa-regular fa-user hover:text-green-500 duration-500"></i> Login / Register</a><a href="../FAVORIES/favoriesview.php" class="text-black hover:text-green-500 duration-500"><i class="hover:text-green-500 duration-500 mr-5 fa-solid fa-heart text-black"></i>Favories </a></div>
+            <div class="pr-5 "><a href="../LOGIN/login.php" class="text-black mr-5  duration-500"><i class="fa-regular fa-user hover:text-green-500 duration-500"></i> Login / Register</a><a href="../FAVORIES/favoriescontroller.php" class="text-black hover:text-green-500 duration-500"><i class="hover:text-green-500 duration-500 mr-5 fa-solid fa-heart text-black"></i>Favories </a></div>
             
         </nav>
         <nav class=" ml-8 md:pl-5  pr-5 p-2 bg-white  md:flex md:items-center  justify-between" >
@@ -51,7 +51,7 @@ Recommandez </p>
                     <a href="../HOME/homeview.php" class=" text-black hover:text-green-500 duration-500 " >Home</a>
                 </li>
                 <li class="mx-8">
-                    <a href="../PRODUCTS/productsview.php" class=" text-black hover:text-green-500 duration-500 " >Produits</a>
+                    <a href="../PRODUCTS/productscontroller.php" class=" text-black hover:text-green-500 duration-500 " >Produits</a>
                 </li>
                 <li class="mx-8">
                     <a href="../ABOUT/aboutview.php" class=" text-black hover:text-green-500 duration-500 " >About Us</a>
@@ -60,12 +60,12 @@ Recommandez </p>
                     <a href="../CONTACTUS/contactusview.php" class=" text-black hover:text-green-500 duration-500 " >Contact Us</a>
                 </li>
                 <li class="mx-8 md:hidden ">
-                <a href="../PANIER/panierview.php" class=" text-black hover:text-green-500 duration-500 " >Panier</a>
+                <a href="../PANIER/paniercontroller.php" class=" text-black hover:text-green-500 duration-500 " >Panier</a>
 
                 </li>
             </ul>
             
-            <a id="panier" href="../PANIER/panierview.php" class="  mr-10 ml-10 hidden md:flex text-black hover:text-green-500 duration-500 " ><i style="font-size:1.4rem; margin-top: 7px;"class=" hover:text-green-500 duration-500 md:opacity-100 opacity-0 fa-solid fa-cart-shopping"></i><div style="margin-left:-7px; font-size:0.9rem;background-color:#17A841;" class="hover:text-green-500 duration-500  hover:w-12 hover:h-12 md:opacity-100 opacity-0  text-white flex justify-center items-center  border circle"><p class ="text-white font-[helvetica]">0</p></div></a>
+            <a id="panier" href="../PANIER/paniercontroller.php" class="  mr-10 ml-10 hidden md:flex text-black hover:text-green-500 duration-500 " ><i style="font-size:1.4rem; margin-top: 7px;"class=" hover:text-green-500 duration-500 md:opacity-100 opacity-0 fa-solid fa-cart-shopping"></i><div style="margin-left:-7px; font-size:0.9rem;background-color:#17A841;" class="hover:text-green-500 duration-500  hover:w-12 hover:h-12 md:opacity-100 opacity-0  text-white flex justify-center items-center  border circle"><p class ="text-white font-[helvetica]"><?php echo $nbr ?></p></div></a>
             
         </nav>
         

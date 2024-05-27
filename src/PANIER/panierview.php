@@ -1,6 +1,4 @@
-<?php
-include '../NAVBAR/navbarview.php'
-    ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -138,6 +136,3 @@ include '../NAVBAR/navbarview.php'
 </body>
 
 </html>
-<?php
-include '../Footer/Footerview.php'
-    ?>

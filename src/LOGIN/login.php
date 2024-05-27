@@ -1,6 +1,6 @@
 <?php 
 session_start();
-    include '../NAVBAR/navbarview.php';
+include '../NAVBAR/navbarcontroller.php';
 
     
 
