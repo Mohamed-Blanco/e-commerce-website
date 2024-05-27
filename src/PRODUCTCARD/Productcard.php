@@ -20,26 +20,37 @@
 </style>
 
 <body class="bg-white" style="background-color: white;">
+    
 
+<form action="../PRODUCTCARD/cardcontroller.php" method="get">
   <div style="margin-left: 10px; margin-right: 10px;" class=" group p-8 mx-16 bg-white w-56 h-82 border-2">
+  
+
     <div class="">
-      <button href="" style="margin-left: 142px;margin-top: 30px; position: absolute;"><i class="hover:text-2xl  hover:text-red-500 opacity-0 group-hover:opacity-100 duration-400 transition-all fa-regular fa-heart"></i></button>
-      <button href="" class="" style="margin-left: 142px;  position: absolute;"><i class="opacity-0 hover:text-2xl  hover:text-black group-hover:opacity-100  ease-out duration-300 fa-solid fa-plus"></i></button>
+      <button  type="submit" name="action" value="favoriser" style="margin-left: 142px;margin-top: 30px; position: absolute;"><i class="hover:text-2xl  hover:text-red-500 opacity-0 group-hover:opacity-100 duration-400 transition-all fa-regular fa-heart"></i></button>
+      <button type="submit" name="action" value="panier" style="margin-left: 142px;  position: absolute;"><i class="opacity-0 hover:text-2xl  hover:text-black group-hover:opacity-100  ease-out duration-300 fa-solid fa-plus"></i></button>
       
-      <img src="https://demo2.wpopal.com/pharmacy2/wp-content/uploads/2022/03/product-31-1-300x300.jpg" alt="">
-     
+    
+      <?php  
+    echo '<img src="data:image/jpeg;base64,' . base64_encode($Productimage) . '" style="height: 160 px; width: auto;" />';
+      ?>
+
     </div>
     <div class="group">
+      
       <ul>
-        <li class=" pt-5 text-xl text-black font-bold">Product Name</li>
-        <li class=" text-1xl">Category</li>
+        <li  class=" pt-5 text-xl text-black font-bold">
+         <?php echo $Productname?>
+         <input type="hidden" value="<?php echo $Productname?>" name="Productname" id="">
+        </li>
+        <li class=" text-1xl"><?php echo $Productcategory?></li>
       </ul>
     </div>
     <div>
       <ul class="pt-5  flex justify-between ">
         <li class="group-hover:hidden group-hover:justify-end md:flex self-center text-black text-bold duration-1000 transition-all">
           <ul>
-            <li>500dh</li>
+            <li><?php echo $Productprix?>dh</li>
             <li class="text-sm ">20% TVA inclus</li>
           </ul>
         </li>
@@ -56,8 +67,7 @@
 
     
   </div>
-  
-
+  </form>
 
 
   <script src="https://kit.fontawesome.com/beb14da2c9.js" crossorigin="anonymous"></script>
