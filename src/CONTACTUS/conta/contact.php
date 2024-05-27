@@ -78,7 +78,7 @@
 
     <div class="p-6 bg-gray-100">
         <h2 class="text-2xl font-bold">Get In Touch</h2>
-        <form action="../conta/code.php" method="post">
+        <form action="conta/code.php" method="post">
             <div class="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
                 <input type="text" name="name" placeholder="Your Name *" class="p-2 border border-gray-300 rounded custom-input" >
                 <input type="email" name="email" placeholder="Email Address *" class="p-2 border border-gray-300 rounded custom-input" >

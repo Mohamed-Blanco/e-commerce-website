@@ -57,7 +57,7 @@ Recommandez </p>
                     <a href="../ABOUT/aboutview.php" class=" text-black hover:text-green-500 duration-500 " >About Us</a>
                 </li>
                 <li class="mx-8">
-                    <a href="../CONTACTUS/conta/contact.php" class=" text-black hover:text-green-500 duration-500 " >Contact Us</a>
+                    <a href="../CONTACTUS/contactusview.php" class=" text-black hover:text-green-500 duration-500 " >Contact Us</a>
                 </li>
                 <li class="mx-8 md:hidden ">
                 <a href="../PANIER/panierview.php" class=" text-black hover:text-green-500 duration-500 " >Panier</a>

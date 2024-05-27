@@ -22,7 +22,7 @@ if (isset($_POST["name"])){
     $mail->Body=$_POST["message"];
     $mail->send();
     //$_SESSION["nom"]=$_POST["name"];
-    header("location:../conta/contact.php");
+    header("location:../contactusview.php");
     die();
 
 }
