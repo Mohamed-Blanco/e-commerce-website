@@ -1,5 +1,6 @@
 <?php
-include '../NAVBAR/navbarview.php'
+include '../NAVBAR/navbarview.php';
+
     ?>
 
 <!DOCTYPE html>
@@ -37,7 +38,7 @@ include '../NAVBAR/navbarview.php'
     <div class="m-10 md:flex md:justify-between">
         <span class="px-6 text-2xl font-bold shrink-0 poppins">Nouveaux produits du mois : </span>
         <a href="http://" class=""><button
-                class="m-5 text-white bg-black rounded-full  md:m-0 w-28 h-9 poppins pulse">Voir Tout <i
+                class="m-5 text-white bg-black rounded-full md:m-0 w-28 h-9 poppins pulse">Voir Tout <i
                     class="text-white fa-solid fa-arrow-right "> </i></button></a>
     </div>
 
@@ -48,7 +49,7 @@ include '../NAVBAR/navbarview.php'
     </div>
 
     <div>
-    <?php include 'slider.html' ?>
+    <?php include 'slider.php' ?>
     </div>
     <div class="md:flex m-10 md:justify-between">
         <span class="shrink-0 px-6 poppins font-bold text-2xl">les Produits les plus vendues : </span>
