@@ -2,7 +2,6 @@
 session_start();
 include '../NAVBAR/navbarcontroller.php';
 
-    
 
     $email="";
     $password="";

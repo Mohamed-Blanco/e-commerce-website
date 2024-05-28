@@ -1,4 +1,6 @@
-
+<?php
+include '../NAVBAR/navbarcontroller.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,25 +31,25 @@
         </ul>
     </div>
     <div>
-    <table class="border-1 ">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
+
+<?php
+//session_start();
+
+//$_SESSION["favories"]=["hawai","doliprane"];
+
+if (isset($_GET["x"])) {
+  echo $_SESSION["contenues"];
+}
+
+
+?>
+
     </div>
 
 </body>
 
 </html>
+
+<?php
+   include '../Footer/Footerview.php';
+   ?>
