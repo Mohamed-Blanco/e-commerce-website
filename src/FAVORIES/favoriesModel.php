@@ -21,6 +21,8 @@ class UserModel {
                     <th class="py-2 px-4 border-b">Date perimé</th>
                     <th class="py-2 px-4 border-b">Quantite</th>
                     <th class="py-2 px-4 border-b">Catégorie</th>
+                    <th class="py-2 px-4 border-b">Action</th>
+
 
                     </tr>
             </thead>
@@ -51,6 +53,9 @@ class UserModel {
                     $all.= "<td class='py-2 px-4 border-b text-center'>{$row["d"]}</td>";
                     $all.= "<td class='py-2 px-4 border-b text-center'>{$row["e"]}</td>";
                     $all.= "<td class='py-2 px-4 border-b text-center'>{$row["f"]}</td>";
+                    $all.="<td class='py-2 px-4 border-b text-center'>";
+                    $all.="<button class='bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded' onclick=\"supprimer('{$row["b"]}')\">Delete</button>";
+                    $all.="</td>";
 
 
                     $all.= "</tr>";
