@@ -4,7 +4,7 @@
 
         
 
-        class Product{
+        class Products{
             public $price = 0;
 
             public function __construct($priceprod = 0 ) {
@@ -13,8 +13,9 @@
 
             public function getFilteredProducts(){
                 
+                include '../PDOModel.php';
+                $conn = PDOModel::getconection();
                 
-                $conn = new PDO('mysql:host=localhost;port=3308;dbname=pharmacie', 'root', '');
                 $query = "SELECT IDp, Prixv, IDcat, Libellép, Imagep FROM produit WHERE Prixv > ?";
                 $stmt = $conn->prepare($query);
                 $stmt->execute([$this->price]);

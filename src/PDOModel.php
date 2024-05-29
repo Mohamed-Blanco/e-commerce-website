@@ -1,5 +1,5 @@
 <?php
-    include 'PDOModel.php';
+   
     class PDOModel{
 
         public static function getconection(){

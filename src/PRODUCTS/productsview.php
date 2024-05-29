@@ -194,7 +194,7 @@
         $result = $conn->query($query);
         $data = $result->fetchAll(PDO::FETCH_ASSOC);*/
 
-        $obj = new Product();
+        $obj = new Products();
         $data = $obj ->getFilteredProducts();
         
         foreach ($data as $ligne) {
