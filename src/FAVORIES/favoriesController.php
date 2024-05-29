@@ -2,11 +2,15 @@
 
 session_start();
 
-for(  $i=0 ; $i<count($_SESSION["favories"]) ; $i++) {
-    echo"".$_SESSION["favories"][$i]."";
-}
+require_once 'favoriesModel.php'; 
 
-include '../NAVBAR/navbarcontroller.php';
+
+
+$x=new UserModel();
+
+$_SESSION["contenues"]=$x->get_favorite($_SESSION["favories"]);
+
+
 include 'favoriesview.php';
 include '../Footer/Footerview.php';
 
