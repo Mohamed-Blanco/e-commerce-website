@@ -98,7 +98,7 @@
 
         <div>
             <div class="overlay" id="overlay"></div>
-            <div class="ml-5 flex justify-start">
+            <div class="flex justify-start ml-5">
                 <div class="w-full p-4">
                     <div class="relative">
                         <button id="filterButton"
@@ -122,13 +122,16 @@
                                 </ul>
                                 <div class="p-4 border border-gray-200 rounded-md bg-gray-50">
                                     <h3 class="mb-2 text-xl font-semibold text-black">Filter by Price</h3>
-                                    <input type="range" min="0" max="1000" step="10"
-                                        class="w-full h-2 mb-2 bg-blue-500 rounded-lg cursor-pointer">
+                                    <form action="ModelProduit.php" method="post">
+                                    <input type="range" id="priceRange" name="priceRange" min="0" max="1000" step="10" class="w-full h-2 mb-2 bg-blue-500 rounded-lg cursor-pointer">
+
                                     <div class="flex justify-between text-sm">
-                                        <span>$0</span>
-                                        <span>$1000</span>
+                                     <span>$0</span>
+                                    <span id="selectedPrice">$1000</span>
                                     </div>
-                                    <button class="px-20 py-2 mt-4 text-white bg-blue-500 rounded-full">Filter</button>
+                                <button class="px-20 py-2 mt-4 text-white bg-blue-500 rounded-full" type="submit">Filter</button>
+                                    </form>
+                  
                                 </div>
                                 <div class="p-4 mt-5 border border-gray-200 rounded-md bg-gray-50">
                                     <h3 class="mb-2 text-xl font-semibold text-black">Product Brands</h3>
@@ -177,6 +180,12 @@
                     filterMenu.classList.add('hidden');
                     overlay.classList.remove('filter-menu-open');
                 });
+                const priceRange = document.getElementById('priceRange');
+        const selectedPrice = document.getElementById('selectedPrice');
+
+        priceRange.addEventListener('input', () => {
+            selectedPrice.textContent = `$${priceRange.value}`;
+        });
             </script>
         </div>
 
@@ -185,7 +194,7 @@
         <div>
 
                 
-        <div class="p-7 pl-0 w-auto grid md:grid-rows-3 grid-cols-1 md:grid-cols-subgrid  md:grid-flow-col ">
+        <div class="grid w-auto grid-cols-1 pl-0 p-7 md:grid-rows-3 md:grid-cols-subgrid md:grid-flow-col ">
     <?php 
     
     
