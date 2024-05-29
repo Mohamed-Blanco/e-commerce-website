@@ -24,15 +24,19 @@ class ProductController {
 
 include_once 'database.php';
 include_once 'productsModel.php';
+include '../PDOModel.php';
 
 class ProductController {
     private $db;
     private $product;
 
     public function __construct() {
-        $database = new Database();
+       /* $database = new Database();
         $this->db = $database->getConnection();
-        $this->product = new Product($this->db);
+        $this->product = new Product($this->db);*/
+        $conn=PDOModel::getconection();
+        $this->product=new Product($conn);
+
     }
 
     public function index() {
