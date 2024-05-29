@@ -14,10 +14,6 @@ class Product {
     }
 
     public function read() {
-       /* $query = "SELECT * FROM " . $this->table_name . " ORDER BY IDp DESC LIMIT 15";
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        return $stmt;*/
         $query = "SELECT p.IDp, p.Libellép, p.Prixv, p.Imagep, c.Libelléca as catégorie
         FROM " . $this->table_name . " p
         JOIN catégorie c ON p.IDcat = c.IDcat
@@ -30,9 +26,21 @@ return $stmt;
     public function readc() {
        
          $query = "SELECT IDcat, Libelléca FROM catégorie";
- $stmt = $this->conn->prepare($query);
- $stmt->execute();
- return $stmt;
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt;
      }
+     public function readTopSelling() {
+        $query = "SELECT p.IDp, p.Libellép, p.Prixv, p.Imagep, c.Libelléca as catégorie, COUNT(cn.IDp) as total_sales
+        FROM contenir cn
+        JOIN produit p ON cn.IDp = p.IDp
+        JOIN catégorie c ON p.IDcat = c.IDcat
+        GROUP BY p.IDp
+        ORDER BY total_sales DESC
+        LIMIT 5";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
 }
 ?>

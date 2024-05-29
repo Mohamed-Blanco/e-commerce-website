@@ -24,37 +24,48 @@ class ProductController {
 
 include_once 'database.php';
 include_once 'productsModel.php';
+include '../PDOModel.php';
 
 class ProductController {
     private $db;
     private $product;
 
     public function __construct() {
-        $database = new Database();
+       /* $database = new Database();
         $this->db = $database->getConnection();
-        $this->product = new Product($this->db);
+        $this->product = new Product($this->db);*/
+        $conn=PDOModel::getconection();
+        $this->product=new Product($conn);
+
     }
 
     public function index() {
         $products = $this->getProducts();
         $categories = $this->getCategories();
+        $topSellingProducts=$this->getTopSellingProducts();
 
         return array(
             'products' => $products,
-            'categories' => $categories
+            'categories' => $categories,
+            'topselling'=>$topSellingProducts
         );
     }
 
-    private function getProducts() {
+    public function getProducts() {
         $stmt = $this->product->read();
         $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $products;
     }
 
-    private function getCategories() {
+    public function getCategories() {
         $stmt = $this->product->readc();
         $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $categories;
+    }
+    public function getTopSellingProducts() {
+        $stmt = $this->product->readTopSelling();
+        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $products;
     }
 }
 
