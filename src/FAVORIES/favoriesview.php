@@ -1,4 +1,8 @@
 <?php
+//session_start();
+
+
+
 include '../NAVBAR/navbarcontroller.php';
 ?>
 
@@ -11,6 +15,7 @@ include '../NAVBAR/navbarcontroller.php';
     <title>Document</title>
     <link href="../output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style>
         .poppins {
@@ -21,7 +26,7 @@ include '../NAVBAR/navbarcontroller.php';
     </style>
 </head>
 
-<body style="background-color:white ;">
+<body style="background-color:white;">
 
     <div class="bg-green-100 p-5">
         <ul id="slidedown" class="flex-rew">
@@ -33,16 +38,34 @@ include '../NAVBAR/navbarcontroller.php';
     <div>
 
 <?php
-//session_start();
 
-//$_SESSION["favories"]=["hawai","doliprane"];
+echo $_SESSION["contenues"];
 
-if (isset($_GET["x"])) {
-  echo $_SESSION["contenues"];
-}
 
 
 ?>
+
+<script>
+
+
+    let $favories = <?= json_encode($_SESSION["favories"]) ?>;
+
+    console.log($favories);
+
+    function supprimer(x) {
+        let index=$favories.indexOf(x);
+
+        const currentUrl = window.location.href;
+
+        const url = new URL(currentUrl);
+        url.searchParams.set('delete', index);
+        window.location.href = url.toString();
+
+
+
+       
+    }
+</script>
 
     </div>
 
@@ -52,4 +75,5 @@ if (isset($_GET["x"])) {
 
 <?php
    include '../Footer/Footerview.php';
-   ?>
+?>
+
