@@ -1,70 +1,67 @@
 
 
 <?php 
-
-        
-
-        class Product{
-            
-    
-            // Vous pouvez maintenant utiliser $selectedPrice comme bon vous semble
-            public $price = 0;
-
-            public function __construct($priceprod = 0) {
-                $this->price = $priceprod;
-                /*if(isset($_POST['priceRange'])) {
-                    $this->price = $_POST['priceRange'];
-                }
-                echo $this->price;*/
-            }
-
-            public function getFilteredProducts(){
-              /*  if(isset($_POST['priceRange'])) {
-                    $this->price = $_POST['priceRange'];
-                }*/
-                
-                $conn = new PDO('mysql:host=localhost;port=3307;dbname=pharmacie', 'root', '');
-                $query = "SELECT IDp, Prixv, IDcat, Libellép, Imagep FROM produit WHERE Prixv > ?";
-                $stmt = $conn->prepare($query);
-                $stmt->execute([$this->price]);
-                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                
-                return $result;
-
-        }
-
-            public function getAllproducts(){
-                $conn = new PDO('mysql:host=localhost;port=3307;dbname=pharmacie', 'root', '');
-                 $query = "SELECT IDp, Prixv, IDcat, Libellép , Imagep FROM produit";
-                $result = $conn->query($query);
-                 $data = $result->fetchAll(PDO::FETCH_ASSOC);
-
-                 return $data;
-            }
-            
-        }
-
-?>
-
-<?php 
-
-        
+         include '../PDOModel.php';
 
         class Products{
-            public $price = 0;
+            
+            public $price = 9999;
 
-            public function __construct($priceprod = 0 ) {
+            public function __construct($priceprod = 9999) {
                 $this->price = $priceprod;
             }
 
+            
+
             public function getFilteredProducts(){
                 
-                include '../PDOModel.php';
+               
                 $conn = PDOModel::getconection();
                 
-                $query = "SELECT IDp, Prixv, IDcat, Libellép, Imagep FROM produit WHERE Prixv > ?";
+                $query = "SELECT p.IDp, p.IDcat, p.Prixv, p.Libellép, p.Imagep, c.Libelléca 
+                FROM produit p
+                INNER JOIN catégorie c ON p.IDcat = c.IDcat
+                WHERE p.Prixv <= :price";
+                
                 $stmt = $conn->prepare($query);
-                $stmt->execute([$this->price]);
+                $stmt->bindParam(':price', $this->price, PDO::PARAM_STR);
+                 $stmt->execute();
+               
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                return $result;
+
+            }
+
+            public function getAllcategory(){
+                
+                $conn = PDOModel::getconection();
+                
+                $query = "SELECT  Libelléca FROM catégorie LIMIT 8";
+                
+                $stmt = $conn->prepare($query);
+                
+                 $stmt->execute();
+               
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                return $result;
+            }
+
+            public function getFilteredbyCategory($category){
+                
+                
+                $conn = PDOModel::getconection();
+                
+                $query = "SELECT p.IDp, p.IDcat, p.Prixv, p.Libellép, p.Imagep, c.Libelléca 
+                FROM produit p
+                INNER JOIN catégorie c ON p.IDcat = c.IDcat
+                WHERE c.Libelléca LIKE :category";
+                
+                $stmt = $conn->prepare($query);
+                $stmt->bindParam(':category', $category, PDO::PARAM_STR);
+                 $stmt->execute();
+               
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 
                 return $result;
@@ -72,12 +69,17 @@
         }
 
             public function getAllproducts(){
-                $conn = new PDO('mysql:host=localhost;port=3308;dbname=pharmacie', 'root', '');
-                 $query = "SELECT IDp, Prixv, IDcat, Libellép , Imagep FROM produit";
-                $result = $conn->query($query);
-                 $data = $result->fetchAll(PDO::FETCH_ASSOC);
-
-                 return $data;
+                $conn = PDOModel::getconection();
+                
+                $query = "SELECT p.Libellép FROM produit p LIMIT 5";
+                
+                $stmt = $conn->prepare($query);
+                
+                 $stmt->execute();
+               
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                return $result;
             }
             
         }
