@@ -1,10 +1,16 @@
 <?php
-class UserModel {
+
+include '../PDOModel.php';
+
+
+
+class FavModel {
     private $db;
 
     public function __construct() {
-        $this->db = new PDO("mysql:host=localhost;dbname=pharmacie", "root", "");
-        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $x=new PDOModel();
+        $con=$x->getconection();
+        $this->db = $con;
     }
     
     public function get_favorite(array $favs) : string {

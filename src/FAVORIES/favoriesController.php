@@ -25,7 +25,7 @@ if (isset($_GET['delete'])) {
 
 
 
-$x=new UserModel();
+$x=new FavModel();
 
 
 $_SESSION["contenues"]=$x->get_favorite($_SESSION["favories"]);
