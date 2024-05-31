@@ -73,7 +73,5 @@ echo $_SESSION["contenues"];
 
 </html>
 
-<?php
-   include '../Footer/Footerview.php';
-?>
+
 

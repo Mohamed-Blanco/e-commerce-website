@@ -1,32 +1,35 @@
 <?php
+
+include '../PDOModel.php';
+
 class UserModel {
     private $db;
 
     public function __construct() {
-        $this->db = new mysqli('localhost', 'root', '', 'pharmacie', 3306);
-
-        if ($this->db->connect_error) {
-            die('Connection failed: ' . $this->db->connect_error);
-        }
+        $x=new PDOModel();
+        $con=$x->getconection();
+        $this->db = $con;
     }
+    
     
 
     public function verify($email, $password) {
-        $sql='select emailc, passwordc from client where emailc=? and passwordc=?';
+        $sql='select emailc, passwordc from client where emailc=:email and passwordc=:pass';
         $stmt = $this->db->prepare($sql);
 
-        $stmt->bind_param("ss", $email,$password);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':pass', $password);
 
 
 
         $stmt->execute();
 
-        $result = $stmt->get_result();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 
         
-        $stmt->close();
-        
-        if ($result->num_rows > 0) {
+        if ($stmt->rowCount() > 0) {
             return true;
         } else {
             return false;
@@ -53,7 +56,6 @@ public function adduser($prenom,$nom,$email,$password,$tele,$date,$sexe,$age,$ad
         return false;
     }
 
-    $stmt->close();
 }
 }
 

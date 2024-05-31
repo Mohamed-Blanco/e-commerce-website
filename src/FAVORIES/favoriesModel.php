@@ -1,10 +1,16 @@
 <?php
-class UserModel {
+
+include '../PDOModel.php';
+
+
+
+class FavModel {
     private $db;
 
     public function __construct() {
-        $this->db = new PDO("mysql:host=localhost;port=3308;dbname=pharmacie", "root", "");
-        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $x=new PDOModel();
+        $con=$x->getconection();
+        $this->db = $con;
     }
     
     public function get_favorite(array $favs) : string {
@@ -12,6 +18,7 @@ class UserModel {
         $all='
 <div class="container mx-auto mb-14">
         <h1 class="text-2xl font-bold mb-6">Favories</h1>
+        <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-300">
             <thead>
                 <tr>
@@ -74,6 +81,8 @@ class UserModel {
         $all.= '
                 </tbody>
                 </table>
+                </div>
+
                 </div>';
 
         
