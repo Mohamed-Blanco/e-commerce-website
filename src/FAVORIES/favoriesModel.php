@@ -18,6 +18,7 @@ class FavModel {
         $all='
 <div class="container mx-auto mb-14">
         <h1 class="text-2xl font-bold mb-6">Favories</h1>
+        <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-300">
             <thead>
                 <tr>
@@ -80,6 +81,8 @@ class FavModel {
         $all.= '
                 </tbody>
                 </table>
+                </div>
+
                 </div>';
 
         
