@@ -2,7 +2,7 @@
 
 session_start();
 
-//$_SESSION["favories"]=["doliprane","hawai"];
+$_SESSION["favories"]=["doliprane","hawai"];
 
 require_once 'favoriesModel.php'; 
 

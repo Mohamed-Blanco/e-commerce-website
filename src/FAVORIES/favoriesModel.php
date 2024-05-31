@@ -3,7 +3,7 @@ class UserModel {
     private $db;
 
     public function __construct() {
-        $this->db = new PDO("mysql:host=localhost;dbname=pharmacie", "root", "");
+        $this->db = new PDO("mysql:host=localhost;port=3308;dbname=pharmacie", "root", "");
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     
