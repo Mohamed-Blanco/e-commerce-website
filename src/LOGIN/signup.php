@@ -79,14 +79,14 @@ include '../NAVBAR/navbarcontroller.php';
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px] ">Prénom <span class="text-red-500">*</span></p>
-                <input pattern="" value="<?=$prenom?>" name="prenom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input pattern="^[a-zA-Z0-9]{3,20}$" value="<?=$prenom?>" name="prenom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il ne doit contenir que des alphabets et chiffres de 3 a 20</p>
 
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Nom <span class="text-red-500">*</span></p>
-                <input  value="<?=$nom?>" name="nom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input pattern="^[a-zA-Z0-9]{3,20}$" value="<?=$nom?>" name="nom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il ne doit contenir que des alphabets et chiffres de 3 a 20</p>
 
@@ -99,38 +99,38 @@ include '../NAVBAR/navbarcontroller.php';
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Mot de passe <span class="text-red-500">*</span></p>
-                <input pattern="/^.{3,10}$/" value="<?=$npassword?>" name="npassword" type="password" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input pattern="^.{3,10}$" value="<?=$npassword?>" name="npassword" type="password" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">chiffres de 3 a 10</p>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Sex</p>
-                <input pattern="/^[MF]{1}$/" value="<?=$sexe?>" name="sexe" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]">
+                <input pattern="^[MF]{1}$" value="<?=$sexe?>" name="sexe" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]">
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">M ou F</p>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">age <span class="text-red-500">*</span></p>
-                <input pattern="/^[0-9]{2}$/" value="<?=$age?>" name="age" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input pattern="^[0-9]{2}$" value="<?=$age?>" name="age" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">2 Numéro</p>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Adress <span class="text-red-500">*</span></p>
-                <input pattern="/^[a-zA-Z0-9\s]{1,35}$/" value="<?=$adress?>" name="adress" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input pattern="^[a-zA-Z0-9\s]{1,35}$" value="<?=$adress?>" name="adress" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">35 charachter au max</p>
 
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Date de naissance <span class="text-red-500">*</span></p>
-                <input pattern="/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/" value="<?=$date?>" name="date" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" placeholder="dd/mm/yyyy" required>
+                <input pattern="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" value="<?=$date?>" name="date" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" placeholder="dd/mm/yyyy" required>
 
             </div>
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Télephone <span class="text-red-500">*</span></p>
-                <input pattern="/^[0-9]{10}$/" value="<?=$tele?>" name="tele" type="tel" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input pattern="^[0-9]{10}$" value="<?=$tele?>" name="tele" type="tel" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il doit etre 10 numero</p>
 
