@@ -1,6 +1,6 @@
 <?php 
 session_start();
-    include '../NAVBAR/navbarview.php';
+    include '../NAVBAR/navbarcontroller.php';
     if(isset($_SESSION["nom"])){
         echo "<script>alert('email has been sended ')</script>";
         unset($_SESSION["nom"]);
@@ -12,7 +12,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" rel="stylesheet">
     <title>Contact Us</title>
     <style>
@@ -22,15 +22,22 @@ session_start();
     </style>
 </head>
 <body>
+<div class="bg-green-100 p-5">
+        <ul id="slidedown" class="flex-rew">
+            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Contact us</li>
+            <li class="mb-5 text-center text-bold "><span>Home</span> <span class="text-black text-bold"><i
+                        class="fa-solid fa-caret-right"></i> Contact us</span></li>
+        </ul>
+    </div>
 <div class="grid md:grid-cols-2">
        
        <div>
        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.992076383627!2d-1.9265851378440593!3d34.64843881719741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd787d5fbdedc3b7%3A0x9dee02db65e54b44!2sPharmacie%20Nour%20El-Mohamadi!5e0!3m2!1sen!2sma!4v1716634550088!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
-   
+        
        <div class="p-6 space-y-4">
-           <h2 class="text-2xl font-bold">How Can We Help You?</h2>
-           <p>We are at your disposal 7 days a week!</p>
-           <div class="space-y-2">
+           <h2 class="text-2xl font-bold text-black">How Can We Help You?</h2>
+           <p class="text-blue-400">We are at your disposal 7 days a week!</p>
+           <div class="space-y-2 text-black">
                <p><strong>Address:</strong> Lotissement ballaoui n° 584, Oujda 60000</p>
                <p><strong>Email:</strong> pharmacie@gmail.com</p>
                <p><strong>Phone:</strong> 0648122256</p>
@@ -85,26 +92,20 @@ session_start();
 </div>
 
    <div class="p-6 bg-gray-100">
-       <h2 class="text-2xl font-bold">Get In Touch</h2>
+       <h2 class="text-2xl font-bold text-black">Get In Touch</h2>
        <form action="code.php" method="post">
            <div class="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
-               <input type="text" name="name" placeholder="Your Name *" class="p-2 border border-gray-300 rounded custom-input" >
-               <input type="email" name="email" placeholder="Email Address *" class="p-2 border border-gray-300 rounded custom-input" >
+               <input type="text" name="name" placeholder="Your Name *" class="p-2 border bg-white border-gray-300 rounded custom-input" >
+               <input type="email" name="email" placeholder="Email Address *" class="p-2 bg-white border border-gray-300 rounded custom-input" >
            </div>
            <div class="mt-4">
-               <textarea name="message" placeholder="Your Message *" rows="4" class="w-full p-2 border border-gray-300 rounded custom-input" name="message"></textarea>
+               <textarea name="message" placeholder="Your Message *" rows="4" class="w-full p-2 border bg-white border-gray-300 rounded custom-input" name="message"></textarea>
            </div>
            <div class="mt-4">
                <button type="submit" class="w-full p-2 text-white bg-blue-500 rounded custom-input">Post Message</button>
            </div>
        </form>
    </div>
-=======
-    <title>Document</title>
-    <link href="../output.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-
-</head>
 <style>
     .circle {
         width: 16px;
@@ -124,7 +125,6 @@ session_start();
         <?php
 include 'C:\xampp\htdocs\ProjectWebPharmacie\src\CONTACTUS\conta\contact.php';
 ?>
->>>>>>> 8875b0c267902e93375c1e53d7bdbf46b50b76b6
 </body>
 </html>
 <?php

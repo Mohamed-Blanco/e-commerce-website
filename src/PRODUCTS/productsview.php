@@ -94,7 +94,7 @@
                         class="fa-solid fa-caret-right"></i> Shop</span></li>
         </ul>
     </div>
-    <div class="flex flex-col items-center justify-center md:flex-row md:items-start">
+    <div class="flex flex-col items-center justify-ce md:justify-start md:flex-row md:items-start">
 
         <div>
             <div class="overlay" id="overlay"></div>
@@ -115,14 +115,27 @@
                                     <button id="closeButton" class="text-black md:hidden">✖</button>
                                 </div>
                                 <ul class="mb-8 space-y-2">
-                                    <li><a href="#" class="text-black hover:text-blue-500">Category 1</a></li>
-                                    <li><a href="#" class="text-black hover:text-blue-500">Category 2</a></li>
-                                    <li><a href="#" class="text-black hover:text-blue-500">Category 3</a></li>
-                                    <li><a href="#" class="text-black hover:text-blue-500">Category 4</a></li>
+                                    <?php 
+
+                                        $cat = new Products();
+                                        $data = $cat->getAllcategory();
+                                     foreach ($data as $ligne) {
+            
+                                        $category = $ligne["Libelléca"];
+                                        
+                                        
+                                        ?>
+                                        <div class="my-2">
+                                        <li><a href="productscontroller.php?category=<?php echo $category; ?>" class="text-black hover:text-blue-500"><?php echo $category; ?></a></li>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
+                                    
                                 </ul>
                                 <div class="p-4 border border-gray-200 rounded-md bg-gray-50">
                                     <h3 class="mb-2 text-xl font-semibold text-black">Filter by Price</h3>
-                                    <form action="ModelProduit.php" method="post">
+                                    <form action="productscontroller.php" method="get">
                                     <input type="range" id="priceRange" name="priceRange" min="0" max="1000" step="10" class="w-full h-2 mb-2 bg-blue-500 rounded-lg cursor-pointer">
 
                                     <div class="flex justify-between text-sm">
@@ -136,14 +149,23 @@
                                 <div class="p-4 mt-5 border border-gray-200 rounded-md bg-gray-50">
                                     <h3 class="mb-2 text-xl font-semibold text-black">Product Brands</h3>
                                     <ul class="space-y-1">
-                                        <li><a href="#" class="text-black hover:underline">Brain</a></li>
-                                        <li><a href="#" class="text-black hover:underline">Facemask</a></li>
-                                        <li><a href="#" class="text-black hover:underline">Greenlab</a></li>
-                                        <li><a href="#" class="text-black hover:underline">Medical</a></li>
-                                        <li><a href="#" class="text-black hover:underline">Mymedi</a></li>
-                                        <li><a href="#" class="text-black hover:underline">Nursecare</a></li>
-                                        <li><a href="#" class="text-black hover:underline">Nursing</a></li>
-                                        <li><a href="#" class="text-black hover:underline">Pharmacy</a></li>
+                                    <?php 
+
+                                    $cat = new Products();
+                                        $data = $cat->getAllproducts();
+                                    foreach ($data as $ligne) {
+
+                                        $productname = $ligne["Libellép"];
+
+
+                                                    ?>
+                                        <div class="my-2">
+                                        <li><a href="productscontroller.php" class="text-black hover:text-blue-500"> <?php echo $productname ?></a></li>
+                                            </div>
+                                         <?php
+                                            }
+                                         ?>
+                                        
                                     </ul>
                                 </div>
                                 <div class="p-4 mt-5 border border-gray-200 rounded-md bg-gray-50">
@@ -202,15 +224,29 @@
         $query = "SELECT IDp, Prixv, IDcat, Libellép , Imagep FROM produit";
         $result = $conn->query($query);
         $data = $result->fetchAll(PDO::FETCH_ASSOC);*/
+        $price =9999;
+        if(isset($_GET["priceRange"])){
+            $price = $_GET["priceRange"];
 
-        $obj = new Product();
-        $data = $obj ->getFilteredProducts();
+        }
+        $obj = new Products($price);
         
+
+        if( isset($_GET["category"]) ){
+            
+            $data = $obj->getFilteredbyCategory($_GET["category"]);
+        }else{
+            $data = $obj->getFilteredProducts();
+        }
+        
+        
+        
+       
         foreach ($data as $ligne) {
             
             $id = $ligne["IDp"];
             $Productprix = $ligne["Prixv"];
-            $Productcategory = $ligne["IDcat"];
+            $Productcategory = $ligne["Libelléca"];
             $Productname = $ligne["Libellép"];
             $Productimage = $ligne["Imagep"];
             
@@ -220,6 +256,7 @@
             </div>
             <?php
         }
+        
     
     ?>
       </div>
