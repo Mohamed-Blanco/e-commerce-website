@@ -59,7 +59,7 @@ class FavModel {
 
                     $all.= "<tr>";
                     $all.="<td class='py-2 px-4 border-b text-center'>
-                    <img src='{$imageSrc}' alt='Image' class='h-16 w-16 object-cover mx-auto' />
+                    <img src='{$imageSrc}' alt='Image' class='h-16 w-16 object-cover mx-auto rounded-full' />
                     </td>";
                     $all.= "<td class='py-2 px-4 border-b text-center'>{$row["a"]}</td>";
                     $all.= "<td class='py-2 px-4 border-b text-center'>{$row["b"]}</td>";
