@@ -41,10 +41,17 @@ class UserModel {
 
 
 public function adduser($prenom,$nom,$email,$password,$tele,$date,$sexe,$age,$adress) {
-    $sql='insert into client(Nomc,passwordc,emailc,Telc,Prénom,datenss,sexe,age,adress) values(?,?,?,?,?,?,?,?,?)';
+    $sql='insert into client(Nomc,passwordc,emailc,Telc,Prénom,datenss,sexe,age,adress) values(:nom,:pass,:email,:tele,:pren,:datenais,:sexe,:age,:adress)';
     $stmt = $this->db->prepare($sql);
-
-    $stmt->bind_param("sssssssis",$nom,$password,$email,$tele,$prenom,$date,$sexe,$age,$adress);
+    $stmt->bindParam(':nom', $nom);
+    $stmt->bindParam(':pass', $password);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':tele', $tele);
+    $stmt->bindParam(':pren', $prenom);
+    $stmt->bindParam(':datenais', $date);
+    $stmt->bindParam(':sexe', $sexe);
+    $stmt->bindParam(':age', $age);
+    $stmt->bindParam(':adress', $adress);
 
 
 
