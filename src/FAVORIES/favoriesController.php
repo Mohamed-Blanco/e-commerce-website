@@ -12,9 +12,8 @@ if (isset($_GET['delete'])) {
     $update=$_SESSION["favories"];
     array_splice($update, $indexdel, 1);
     $_SESSION["favories"]=$update;
+
 }
-
-
 
 $x=new FavModel();
 

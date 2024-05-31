@@ -22,6 +22,7 @@ class FavModel {
         <table class="min-w-full bg-white border border-gray-300">
             <thead>
                 <tr>
+                <th class="py-2 px-4 border-b">Image</th> 
                     <th class="py-2 px-4 border-b">ID</th>
                     <th class="py-2 px-4 border-b">Libellé</th>
                     <th class="py-2 px-4 border-b">Prix</th>
@@ -40,7 +41,7 @@ class FavModel {
 
         foreach ($favs as $fav) {
 
-            $sql = 'select pr.Idp as a, pr.Libellép as b, pr.Prixv as c, pr.Datepp as d,pr.Qte as e,cat.Libelléca as f from produit pr JOIN catégorie cat on cat.IDcat=pr.IDcat where pr.Libellép=:x ;';
+            $sql = 'select pr.Imagep as w,pr.Idp as a, pr.Libellép as b, pr.Prixv as c, pr.Datepp as d,pr.Qte as e,cat.Libelléca as f from produit pr JOIN catégorie cat on cat.IDcat=pr.IDcat where pr.Libellép=:x ;';
             $stmt = $this->db->prepare($sql);
             $stmt->bindParam(':x', $fav);
 
@@ -51,9 +52,15 @@ class FavModel {
 
             if ($result) {
                 foreach ($result as $row) {
+                    $imageData = base64_encode($row["w"]);
+                    // Create the image source string
+                    $imageSrc = 'data:image/jpeg;base64,' . $imageData;
 
 
                     $all.= "<tr>";
+                    $all.="<td class='py-2 px-4 border-b text-center'>
+                    <img src='{$imageSrc}' alt='Image' class='h-16 w-16 object-cover mx-auto rounded-full' />
+                    </td>";
                     $all.= "<td class='py-2 px-4 border-b text-center'>{$row["a"]}</td>";
                     $all.= "<td class='py-2 px-4 border-b text-center'>{$row["b"]}</td>";
                     $all.= "<td class='py-2 px-4 border-b text-center'>{$row["c"]}</td>";
@@ -64,12 +71,7 @@ class FavModel {
                     $all.="<button class='bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded' onclick=\"supprimer('{$row["b"]}')\">Delete</button>";
                     $all.="</td>";
 
-
                     $all.= "</tr>";
-
-
-
-
 
                 }
             } else {
