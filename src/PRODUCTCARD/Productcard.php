@@ -54,17 +54,19 @@
             <li class="text-sm ">20% TVA inclus</li>
           </ul>
         </li>
+  </form>
+  <form action="../FICHEPRODUCT/ficheController.php" method="get">
         <li>
-          <a href="../FICHEPRODUCT/ficheproduit.php"
+          <button type="submit" name="action" value="acheter"
             class="group-hover:w-40 flex items-center group-hover:px-2  duration-100 justify-center w-10 h-10 bg-green-400 group-hover:bg-green-500 transition-all rounded-full group-hover:duration-1000">
-            
+            <textarea name="Productname" class="hidden" ><?php echo $Productname?></textarea>
             <p class="text-white group-hover:flex hidden text-sm transition-transform " > <span class="group-hover:opacity-100 text-white transition-all ">Acheter </span></p>
             <i class="  group-hover:mx-2 text-white fa-solid fa-basket-shopping"></i>
-          </a>
+          </button>
         </li>
       </ul>
     </div>
-
+    </form>
     
   </div>
   </form>

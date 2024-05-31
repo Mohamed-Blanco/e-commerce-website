@@ -10,6 +10,7 @@ class CardModel{
             session_start();
             
             if(!isset($_SESSION["panier"])){
+                
                 $_SESSION['panier'] = array();
             }else{
                 if (in_array($Productname, $_SESSION['panier'])) {
@@ -40,6 +41,8 @@ class CardModel{
         header('Location: ../PRODUCTS/productscontroller.php');
         exit();
     }
+
+    
 }
 
 ?>

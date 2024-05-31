@@ -9,15 +9,13 @@ if(isset($_GET["action"])){
     $obj = new cardModel();
 
     if($action == "panier"){
-        $obj->addtoPanier($Productname);
-        
-        
+        $obj->addtoPanier($Productname);        
     }
+    
     if($action == "favoriser"){
-        $obj->addtoFavories($Productname);
-       
-        
+        $obj->addtoFavories($Productname);     
     }
+    
 }
 
 if(!isset($_GET["action"])){

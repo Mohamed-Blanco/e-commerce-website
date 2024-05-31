@@ -30,7 +30,7 @@ include '../NAVBAR/navbarcontroller.php';
 
     <div class="bg-green-100 p-5">
         <ul id="slidedown" class="flex-rew">
-            <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Favories</li>
+            <li class="text-2xl text-center text-bold mt-5 mb-2">Favories</li>
             <li class="mb-5 text-center text-bold "><span>Menu </span> <span class="text-black text-bold"><i
                         class="fa-solid fa-caret-right"></i> Favories</span></li>
         </ul>

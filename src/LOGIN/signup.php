@@ -79,14 +79,14 @@ include '../NAVBAR/navbarcontroller.php';
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px] ">Prénom <span class="text-red-500">*</span></p>
-                <input pattern="/^[a-zA-Z0-9]{3,20}$/" value="<?=$prenom?>" name="prenom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input pattern="" value="<?=$prenom?>" name="prenom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il ne doit contenir que des alphabets et chiffres de 3 a 20</p>
 
 
             <div class="flex justify-center flex-col">
                 <p class="text-[rgb(21,12,107)] mt-[20px] font-bold ml-[35px]">Nom <span class="text-red-500">*</span></p>
-                <input pattern="/^[a-zA-Z0-9]{3,20}$/" value="<?=$nom?>" name="nom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
+                <input  value="<?=$nom?>" name="nom" type="text" class="bg-white text-black rounded-3xl h-[45px] mt-[15px] xl:w-[500px] sm:w-[360px] w-[300px] mx-auto px-[10px]" required>
             </div>
             <p class="text-[rgb(21,12,107)] mt-[4px] ml-[35px] text-[14px]">il ne doit contenir que des alphabets et chiffres de 3 a 20</p>
 

@@ -16,10 +16,9 @@ class FavModel {
     public function get_favorite(array $favs) : string {
 
         $all='
-<div class="container mx-auto mb-14">
-        <h1 class="text-2xl font-bold mb-6">Favories</h1>
+<div class="my-5 container mx-auto mb-14">
         <div class="overflow-x-auto">
-        <table class="min-w-full bg-white border border-gray-300">
+        <table class=" min-w-full bg-white border border-gray-300">
             <thead>
                 <tr>
                 <th class="py-2 px-4 border-b">Image</th> 

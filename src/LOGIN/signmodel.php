@@ -20,8 +20,6 @@ class UserModel {
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':pass', $password);
 
-
-
         $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -35,7 +33,6 @@ class UserModel {
             return false;
         }
         
-
 
 }
 
