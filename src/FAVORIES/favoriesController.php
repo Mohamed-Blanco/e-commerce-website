@@ -18,12 +18,7 @@ if (isset($_GET['delete'])) {
 
     $_SESSION["favories"]=$update;
 
-
-
-
 }
-
-
 
 $x=new FavModel();
 
