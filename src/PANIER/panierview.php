@@ -1,8 +1,6 @@
-
-
+<?php include '../NAVBAR/navbarcontroller.php'?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,64 +65,85 @@
     </div>
     <section class="mb-12">
     <div class="container mx-auto px-4 mt-10 flex flex-col sm:flex-col md:flex-row justify-between">
-    <table class="w-full md:w-3/5 shadow-lg rounded-lg table-mobile">
+    <table class="w-full md:w-3/5 text-left shadow-lg rounded-lg table-mobile">
     <thead class="h-32">
         <tr class="text-xs text-center text-gray-500 bg-gray-50 uppercase border-b">
             <th class="px-4 py-3">Produit</th>
             <th class="px-4 py-3">Prix</th>
             <th class="px-4 py-3">Quantité</th>
-            <th class="px-4 py-3">Subtotale</th>
-            <th class="px-4 py-3">supprimer</th>
+            <th class="px-4 py-3">Subtotal</th>
+            <th class="px-4 py-3">Supprimer</th>
         </tr>
     </thead>
     <tbody class="h-28">
+    <?php foreach ($_SESSION["panier"] as $productName): ?>
+    <?php 
+    $details = $panierModel->panierproduct($productName);
+    if ($details): ?>
+    <?php  $subtotal = $details['Prixv'] * 1; 
+                $total += $subtotal;?>
         <tr class="text-gray-700 text-center">
             <td class="px-4 py-3" data-label="Produit:">
                 <div class="flex items-center gap-1.5">
                     <div class="flex-shrink-0 w-10 h-10">
-                        <img class="w-full h-full rounded-full" src="../images/dolip.jpg" alt="product image" />
+                        <?php  
+                       
+                         $imageData = base64_encode($details['Imagep']);
+                       
+                        echo '<img src="data:image/jpeg;base64,' . $imageData . '" class="w-full h-full rounded-full" />';
+                        ?>
                     </div>
                     <div class="ml-3">
-                        <p class="text-sm font-medium text-gray-900">Doliprane</p>
-                        <p class="text-sm text-gray-500">Description</p>
+                        <p class="text-sm font-medium text-gray-900"><?php echo $details['Libellép'] ?></p>
                     </div>
                 </div>
             </td>
-            <td class="px-4 py-3 text-sm" data-label="Prix:">$20.00</td>
+            <td class="px-4 py-3 text-sm" data-label="Prix:"><?php echo $details['Prixv'] ?> DH</td>
             <td class="px-4 py-3 text-sm" data-label="Quantité:">
-                <input style="background-color:white" type="number" value="2" min="1" class="w-16 text-center rounded border appearance-none">
+            <input style="background-color:white" type="number" value="1" min="1" class="w-16 text-center rounded border appearance-none quantity-input" data-price="<?php echo $details['Prixv'] ?>">
+
             </td>
-            <td class="px-4 py-3 text-sm" data-label="Subtotal:">$40.00</td>
-            <td class="px-4 py-3 text-sm" data-label="Supprimer:">
-                <button class="p-2 rounded-full hover:bg-red-100 border border-transparent hover:border-red-500 text-red-500 hover:text-red-600 remove-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </td>
+            <td class="px-4 py-3 text-sm subtotal" data-label="Subtotal:"><?php echo $details['Prixv']  ?> DH</td>
+
+            <form action="panierController.php" method="post">
+              <input type="hidden" name="action" value="remove">
+              <input type="hidden" name="product_name" value="<?php echo $details['Libellép']; ?>">
+
+              <td class="px-4 py-3 text-sm" data-label="Supprimer:">
+               <button type="submit" class="p-2 rounded-full hover:bg-red-100 border border-transparent hover:border-red-500 text-red-500 hover:text-red-600 remove-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            </button>
+    </td>
+</form>
+
         </tr>
+    <?php endif; ?>
+<?php endforeach; ?>
+
     </tbody>
 </table>      
         <table class="w-full md:w-1/3 md:mr-5 mt-5 md:mt-0 text-left shadow-lg rounded-lg">
             <thead class="h-16">
                 <tr class="text-xs text-center text-gray-500 bg-gray-50 uppercase border-b">
-                    <th class="px-4 py-3">Totaux du panier</th>
+                    <th class="px-4 py-3">Cart totals</th>
                     <th class="px-4 py-3"></th>
                 </tr>
             </thead>
             <tbody class="h-32">
                 <tr>
                     <th class="px-4">Subtotal</th>
-                    <td>$61.00</td>
+                    <td id="Subtotal" class="px-4"><?php echo number_format($total, 2); ?> DH</td>
                 </tr>
                 <tr>
                     <th class="px-4">Total</th>
-                    <td>$50.00</td>
+                    <td id="total" class="px-4"><?php echo number_format($total, 2); ?> DH</td>
                 </tr>
                 <tr>
                     <th class="px-7">
                         <div class="flex flex-col space-y-4">
-                            <a href="/checkout" class="bg-amber-600 text-white font-bold py-2 rounded-full text-center hover:bg-amber-700">Passez à checkout</a>
+                            <a href="/checkout" class="bg-amber-600 text-white font-bold py-2 rounded-full text-center hover:bg-amber-700">Passez à la caisse</a>
                             <a href="../PRODUCTS/productsview.php" class="bg-gray-200 text-gray-800 font-bold py-2 rounded-full text-center hover:bg-gray-300">Continuer Shopping</a>
                         </div>
                     </th>
@@ -133,6 +152,45 @@
         </table>
     </div>
 </section>
+<script>
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const rows = document.querySelectorAll('.text-gray-700.text-center');
+
+        rows.forEach(row => {
+            const priceCell = row.querySelector('[data-label="Prix:"]');
+            const price = parseFloat(priceCell.textContent);
+            const quantityInput = row.querySelector('.quantity-input');
+            const subtotalCell = row.querySelector('.subtotal');
+
+            quantityInput.addEventListener('input', () => {
+                const quantity = parseFloat(quantityInput.value);
+                const subtotal = price * quantity;
+                subtotalCell.textContent = subtotal + ' DH';
+                updateTotal();
+            });
+        });
+
+        // Update total function
+        function updateTotal() {
+            total = 0;
+            rows.forEach(row => {
+                const subtotalCell = row.querySelector('.subtotal');
+                total += parseFloat(subtotalCell.textContent);
+            });
+            document.getElementById('Subtotal').textContent = total.toFixed(2) + 'DH';
+            document.getElementById('total').textContent = total.toFixed(2) + 'DH';
+        }
+    });
+
+
+
+
+   
+</script>
+
+
 </body>
 
 </html>
+<?php include '../Footer/Footerview.php'?>
