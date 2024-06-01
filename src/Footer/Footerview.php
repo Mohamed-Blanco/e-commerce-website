@@ -12,7 +12,7 @@
 <footer class="bg-white lg:grid lg:grid-cols-5">
   <div class="relative block h-32 lg:col-span-2 lg:h-full">
     <img
-      src="../images/pharmacieimage.jpeg"
+      src="../images/pharmacie.jpg"
       alt=""
       class="absolute inset-0 h-full w-full object-cover"
     />

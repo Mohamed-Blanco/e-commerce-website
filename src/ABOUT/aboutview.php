@@ -82,7 +82,7 @@
                 <h5 class="text-2xl font-bold leading-tight text-black sm:text-2xl lg:text-2xl lg:leading-tight">Technologie que nous utilisons</h5>
                 <p class="mt-4 text-base leading-relaxed text-gray-600">Notre technologie avancée n'est pas destinée à supporter la douleur mais à dépasser les méthodes conventionnelles pour apporter des innovations significatives.</p>
             </div>
-                    <img class="rounded-md w-full h-full py-4" src="https://enovathemes.com/propharm/wp-content/uploads/post6.jpg" alt=""/>
+                    <img class="rounded-md  py-4" src="https://enovathemes.com/propharm/wp-content/uploads/post6.jpg" alt=""/>
         </div>
     </div>
 </section>
