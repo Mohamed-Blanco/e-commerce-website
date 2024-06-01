@@ -18,14 +18,9 @@ if (isset($_GET['delete'])) {
 
     $_SESSION["favories"]=$update;
 
-
-
-
 }
 
-
-
-$x=new UserModel();
+$x=new FavModel();
 
 
 $_SESSION["contenues"]=$x->get_favorite($_SESSION["favories"]);
