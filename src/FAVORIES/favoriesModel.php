@@ -17,7 +17,7 @@ class FavModel {
 
         $all='
 <div class="container mx-auto mb-14">
-        <h1 class="text-2xl font-bold mb-6">Favories</h1>
+        
         <div class="container mx-auto px-4 mt-10 flex flex-col sm:flex-col md:flex-row justify-between">
         <table class="w-full md:w-4/5 text-left shadow-lg rounded-lg table-mobile"">
             <thead class="h-32">
@@ -75,7 +75,7 @@ class FavModel {
 
                 }
             } else {
-                $all .= "none<br>";  
+                $all .= "<br>";  
             }
             
 

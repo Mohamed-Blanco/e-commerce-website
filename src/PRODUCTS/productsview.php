@@ -152,7 +152,7 @@
                                     <?php 
 
                                     $cat = new Products();
-                                        $data = $cat->getAllproducts();
+                                    $data = $cat->getAllproducts();
                                     foreach ($data as $ligne) {
 
                                         $productname = $ligne["Libellép"];
