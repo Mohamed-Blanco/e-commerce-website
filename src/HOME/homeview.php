@@ -51,11 +51,11 @@ include '../NAVBAR/navbarview.php';
     <div>
     <?php include 'slider.php' ?>
     </div>
-    <div class="md:flex m-10 md:justify-between">
-        <span class="shrink-0 px-6 poppins font-bold text-2xl">les Produits les plus vendues : </span>
-        <a href="http://" class="  "><button
-                class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
-                    class="text-white fa-solid fa-arrow-right  "> </i></button></a>
+    <div class="m-10 md:flex md:justify-between">
+        <span class="px-6 text-2xl font-bold shrink-0 poppins">les Produits les plus vendues : </span>
+        <a href="http://" class=""><button
+                class="m-5 text-white bg-black rounded-full md:m-0 w-28 h-9 poppins pulse">Voir Tout <i
+                    class="text-white fa-solid fa-arrow-right "> </i></button></a>
     </div>
 
     <div class=""><?php include 'Produitsplus.php' ?></div>

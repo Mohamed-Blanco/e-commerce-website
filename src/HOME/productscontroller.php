@@ -22,7 +22,6 @@ class ProductController {
 }
 */
 
-include_once 'database.php';
 include_once 'productsModel.php';
 include '../PDOModel.php';
 
