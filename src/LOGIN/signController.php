@@ -18,7 +18,7 @@ if (isset($_POST['email'])) {
 
 
     if ($userModel->verify($email,$password)) {
-        echo "Welcome";
+        header("location:../HOME/homeview.php");
         exit();
     } else {
         

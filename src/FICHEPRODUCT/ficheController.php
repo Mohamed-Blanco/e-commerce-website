@@ -22,10 +22,12 @@
         include "ficheproduit.php";
     }
 
-    if(isset($_GET["action"])){
-        $obj = new Fichemodel();
-        $obj->addtoFavories($productname);
-        header("location:./ficheproduit.php");
+    if($_GET["action"] == "favoriser"){
+        if( isset($_GET["product"])){
+        $obet = new Fichemodel();
+        $productname = $_GET["product"];
+        $obet->addtoFavories($productname);
+        }
     }
    
 ?>
