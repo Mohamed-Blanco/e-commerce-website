@@ -144,7 +144,7 @@
                     <th class="px-7">
                         <div class="flex flex-col space-y-4">
                             <a href="/checkout" class="bg-amber-600 text-white font-bold py-2 rounded-full text-center hover:bg-amber-700">Passez à la caisse</a>
-                            <a href="../PRODUCTS/productsview.php" class="bg-gray-200 text-gray-800 font-bold py-2 rounded-full text-center hover:bg-gray-300">Continuer Shopping</a>
+                            <a href="../PRODUCTS/productscontroller.php" class="bg-gray-200 text-gray-800 font-bold py-2 rounded-full text-center hover:bg-gray-300">Continuer Shopping</a>
                         </div>
                     </th>
                 </tr>

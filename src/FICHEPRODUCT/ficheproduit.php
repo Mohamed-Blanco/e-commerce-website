@@ -93,9 +93,12 @@ include '../NAVBAR/navbarcontroller.php';
                             class="bg-[rgb(39,197,143)] text-white  rounded-tl-3xl rounded-br-3xl rounded-bl-3xl mt-[20px] md:mr-[50px] text-lg mx-auto  w-2/3 h-12 flex justify-center items-center gap-5">j'Achete
                             Maintenant
                             <i class="fa-solid fa-cart-shopping"></i></button>
-                        <button type="submit" name="action" value="favoriser" class="bg-[rgb(21,12,107)] text-white  rounded-tl-3xl rounded-br-3xl  mt-[20px] md:mr-[30px]  ml-5 mx-auto  w-1/5 h-12 p-2 flex items-center gap-2">
+                            <form action=""></form>
+                            <form  action="">
+                        <button type="submit" name="action" value="favoriser"
+                            class="bg-[rgb(21,12,107)] text-white  rounded-tl-3xl rounded-br-3xl  mt-[20px] md:mr-[30px]  ml-5 mx-auto  w-1/5 h-12 p-2 flex items-center gap-2">
                             Favoriser<i class="fa-solid fa-heart"></i></button>
-                            <textarea name="product" class="hidden"><?php echo $productname ?></textarea>
+                        <textarea name="product" class="hidden"><?php echo $productname ?></textarea>
                     </li>
                 </form>
                 <li class="">

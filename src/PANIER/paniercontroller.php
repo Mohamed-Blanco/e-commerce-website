@@ -47,7 +47,7 @@ try {
             <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg text-center">
                 <i class="fas fa-shopping-cart text-blue-500 text-3xl"></i>
                 <p class="mt-4 text-lg text-gray-800">' . $e->getMessage() . '</p>
-                <a href="../PRODUCTS/productsview.php" class="inline-block mt-4 bg-yellow-500 text-blue-500 font-bold py-2 px-4 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 shadow-lg transition ease-in-out duration-150 cursor-pointer">
+                <a href="../PRODUCTS/productscontroller.php" class="inline-block mt-4 bg-yellow-500 text-blue-500 font-bold py-2 px-4 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 shadow-lg transition ease-in-out duration-150 cursor-pointer">
                 Retourner au shopping</a>
             </div>
           </div></section>';
