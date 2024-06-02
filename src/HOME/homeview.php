@@ -41,8 +41,12 @@ include '../NAVBAR/navbarview.php';
                 class="m-5 text-white bg-black rounded-full md:m-0 w-28 h-9 poppins pulse">Voir Tout <i
                     class="text-white fa-solid fa-arrow-right "> </i></button></a>
     </div>
-
-    <?php include 'Carousel2.php' ?>
+<div class="hidden md:block">
+<?php include 'Carousel2.php' ?>
+</div>
+<div class="md:hidden">
+<?php include 'Carousel3.php' ?>
+</div>
     <div class="flex-row justify-center gap-16 mt-8 mb-8 md:flex ">
             <?php include 'Shopnow.html' ?>
             <?php include 'Shopnow2.html' ?>
@@ -58,7 +62,9 @@ include '../NAVBAR/navbarview.php';
                     class="text-white fa-solid fa-arrow-right "> </i></button></a>
     </div>
 
-    <div class=""><?php include 'Produitsplus.php' ?></div>
+    <div class="">
+        <?php include 'Produitsplus.php' ?>
+    </div>
 
     
 </body>
