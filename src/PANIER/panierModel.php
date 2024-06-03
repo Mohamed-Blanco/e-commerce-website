@@ -1,9 +1,10 @@
 <?php
-
+include '../PDOModel.php';
 class PanierModel {
     public function panierproduct($produitName) {  
-        include ("connection.php");  
+
         try {
+            $conn = PDOModel::getconection();
             $stmt = $conn->prepare("SELECT DISTINCT Libellép, Prixv, Imagep FROM produit WHERE Libellép = ?");
             $stmt->execute([$produitName]); 
             $row = $stmt->fetch(PDO::FETCH_ASSOC); 

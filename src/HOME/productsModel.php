@@ -14,14 +14,14 @@ class Product {
     }
 
     public function read() {
-        $query = "SELECT p.IDp, p.Libellép, p.Prixv, p.Imagep, c.Libelléca as catégorie
-        FROM " . $this->table_name . " p
+        $query = "SELECT p.IDp, p.Libellép, p.Prixv, p.Imagep, c.Libelléca 
+        FROM produit p
         JOIN catégorie c ON p.IDcat = c.IDcat
         ORDER BY p.IDp DESC
         LIMIT 15";
-$stmt = $this->conn->prepare($query);
-$stmt->execute();
-return $stmt;
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt;
     }
     public function readc() {
        
