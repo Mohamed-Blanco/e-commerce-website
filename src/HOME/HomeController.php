@@ -10,8 +10,8 @@ class HomeController
 
     public function __construct()
     {
-        $conn = new PDO('mysql:host=localhost;port=3308;dbname=pharmacie', 'root', '');
-        $this->product = new HomeModel($conn);
+            $conn = PDOModel::getconection();
+            $this->product = new HomeModel($conn);
 
     }
 
