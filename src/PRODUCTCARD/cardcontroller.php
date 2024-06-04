@@ -19,7 +19,6 @@ if(isset($_GET["action"])){
 }
 
 if(!isset($_GET["action"])){
-    
 
     include 'Productcard.php';
 

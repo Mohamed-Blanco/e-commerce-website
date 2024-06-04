@@ -2,6 +2,7 @@
 
 <?php 
          include '../PDOModel.php';
+         $conn = PDOModel::getconection();
 
         class Products{
             

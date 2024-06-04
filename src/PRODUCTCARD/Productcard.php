@@ -32,14 +32,14 @@
       
     
       <?php  
-    echo '<img src="data:image/jpeg;base64,' . base64_encode($Productimage) . '" style="height: 160 px; width: auto;" />';
+    echo '<img src="data:image/jpeg;base64,' . base64_encode($Productimage) . '" style="height: 160px; width: auto;" />';
       ?>
 
     </div>
     <div class="group">
       
       <ul>
-        <li  class=" pt-5 text-xl text-black font-bold">
+        <li  class=" pt-5 h-24 text-xl text-black font-bold">
          <?php echo $Productname?>
          <input type="hidden" value="<?php echo $Productname?>" name="Productname" id="">
         </li>

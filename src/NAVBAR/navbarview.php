@@ -37,7 +37,7 @@ Recommandez </p>
         <nav class=" ml-8 md:pl-5  pr-5 p-2 bg-white  md:flex md:items-center  justify-between" >
             
             <div class="flex justify-between ">
-                <a href="../HOME/homeview.php"><img src="../images/LogoPharma.png" class="h-16 inline mr-10" ></img></a>
+                <a href="../HOME/HomeController.php"><img src="../images/LogoPharma.png" class="h-16 inline mr-10" ></img></a>
                 
                 
                 <span class=" md:hidden self-center pr-5">
@@ -48,7 +48,7 @@ Recommandez </p>
 
             <ul  id="slidedown" name ="Menu" class = " md:flex md:static  z-[-1] md:z-auto " style="font-size:1.08rem;">
                 <li class="mx-8">
-                    <a href="../HOME/index.php" class=" text-black hover:text-green-500 duration-500 " >Home</a>
+                    <a href="../HOME/HomeController.php" class=" text-black hover:text-green-500 duration-500 " >Home</a>
                 </li>
                 <li class="mx-8">
                     <a href="../PRODUCTS/productscontroller.php" class=" text-black hover:text-green-500 duration-500 " >Produits</a>
