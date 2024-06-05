@@ -88,7 +88,7 @@ include '../NAVBAR/navbarcontroller.php'
 
     <div class="md:flex m-10 md:justify-between">
         <span class="shrink-0 px-6 poppins font-bold text-2xl">Nouveaux produits du mois : </span>
-        <a href="http://" class="  "><button
+        <a  href="../PRODUCTS/productscontroller.php" class="  "><button
                 class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
                     class="text-white fa-solid fa-arrow-right  "> </i></button></a>
     </div>
@@ -251,42 +251,51 @@ include '../NAVBAR/navbarcontroller.php'
 
         <!--Categories Code Ends Here -> :-->
 
-        <div class="mt-10 w-full rounded mx-auto">
-    <div id="default-carousel" class="relative" data-carousel="static">
-        <div class="carousel-height overflow-hidden relative">
-            <?php
-            $result = $obj->getTopSellingProducts();
-            $count = count($result);
-            if ($count > 0) {
-                ?>
-                <div class="justify-center items-center duration-700 ease-in-out flex" >
-                    <?php
-                    foreach ($result as $ligne) {
-                        $id = $ligne["IDp"];
-                        $Productprix = $ligne["Prixv"];
-                        $Productcategory = $ligne["catégorie"];
-                        $Productname = $ligne["Libellép"];
-                        $Productimage = $ligne["Imagep"];
-                        ?>
-                        <div>
-                            <?php include "../PRODUCTCARD/cardcontroller.php"; ?>
-                        </div>
-                        <?php
-                    }
-                    ?>
-                </div>
-                <?php
-            } else {
-                echo "No products found.";
-            }
-            ?>
-        </div>
-       
+        <!--Top Selling -> :-->
+
+        <<div class="md:flex m-10 md:justify-between">
+            <span class="shrink-0 px-6 poppins font-bold text-2xl">Les Produits les plus vendue : </span>
+            <a href="../PRODUCTS/productscontroller.php" class="  "><button
+                    class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
+                        class="text-white fa-solid fa-arrow-right  "> </i></button></a>
     </div>
-</div>
+
+    <div class="mt-10 w-full rounded mx-auto">
+        <div id="default-carousel" class="relative" data-carousel="static">
+            <div class="carousel-height overflow-hidden relative">
+                <?php
+                $result = $obj->getTopSellingProducts();
+                $count = count($result);
+                if ($count > 0) {
+                    ?>
+                    <div class="justify-center items-center duration-700 ease-in-out flex">
+                        <?php
+                        foreach ($result as $ligne) {
+                            $id = $ligne["IDp"];
+                            $Productprix = $ligne["Prixv"];
+                            $Productcategory = $ligne["catégorie"];
+                            $Productname = $ligne["Libellép"];
+                            $Productimage = $ligne["Imagep"];
+                            ?>
+                            <div>
+                                <?php include "../PRODUCTCARD/cardcontroller.php"; ?>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <?php
+                } else {
+                    echo "No products found.";
+                }
+                ?>
+            </div>
+
+        </div>
+    </div>
 
 
-            <script src="https://kit.fontawesome.com/beb14da2c9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/beb14da2c9.js" crossorigin="anonymous"></script>
 
 </body>
 

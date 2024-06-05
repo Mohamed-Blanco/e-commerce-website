@@ -79,7 +79,7 @@
     }
 
     @media (min-width: 769px) {
-        #filterMenu {
+        #filterMenu{
             position: static;
             width: 300px;
         }
@@ -115,57 +115,61 @@
                                     <button id="closeButton" class="text-black md:hidden">✖</button>
                                 </div>
                                 <ul class="mb-8 space-y-2">
-                                    <?php 
+                                    <?php
 
-                                        $cat = new Products();
-                                        $data = $cat->getAllcategory();
-                                     foreach ($data as $ligne) {
-            
+                                    $cat = new Products();
+                                    $data = $cat->getAllcategory();
+                                    foreach ($data as $ligne) {
+
                                         $category = $ligne["Libelléca"];
-                                        
-                                        
+
+
                                         ?>
                                         <div class="my-2">
-                                        <li><a href="productscontroller.php?category=<?php echo $category; ?>" class="text-black hover:text-blue-500"><?php echo $category; ?></a></li>
+                                            <li><a href="productscontroller.php?category=<?php echo $category; ?>"
+                                                    class="text-black hover:text-blue-500"><?php echo $category; ?></a></li>
                                         </div>
                                         <?php
                                     }
                                     ?>
-                                    
+
                                 </ul>
                                 <div class="p-4 border border-gray-200 rounded-md bg-gray-50">
                                     <h3 class="mb-2 text-xl font-semibold text-black">Filter by Price</h3>
                                     <form action="productscontroller.php" method="get">
-                                    <input type="range" id="priceRange" name="priceRange" min="0" max="1000" step="10" class="w-full h-2 mb-2 bg-blue-500 rounded-lg cursor-pointer">
+                                        <input type="range" id="priceRange" name="priceRange" min="0" max="1000"
+                                            step="10" class="w-full h-2 mb-2 bg-blue-500 rounded-lg cursor-pointer">
 
-                                    <div class="flex justify-between text-sm">
-                                     <span>$0</span>
-                                    <span id="selectedPrice">$1000</span>
-                                    </div>
-                                <button class="px-20 py-2 mt-4 text-white bg-blue-500 rounded-full" type="submit">Filter</button>
+                                        <div class="flex justify-between text-sm">
+                                            <span>$0</span>
+                                            <span id="selectedPrice">$1000</span>
+                                        </div>
+                                        <button class="px-20 py-2 mt-4 text-white bg-blue-500 rounded-full"
+                                            type="submit">Filter</button>
                                     </form>
-                  
+
                                 </div>
                                 <div class="p-4 mt-5 border border-gray-200 rounded-md bg-gray-50">
                                     <h3 class="mb-2 text-xl font-semibold text-black">Product Brands</h3>
                                     <ul class="space-y-1">
-                                    <?php 
+                                        <?php
 
-                                    $cat = new Products();
-                                    $data = $cat->getAllproducts();
-                                    foreach ($data as $ligne) {
+                                        $cat = new Products();
+                                        $data = $cat->getAllproducts();
+                                        foreach ($data as $ligne) {
 
-                                        $productname = $ligne["Libellép"];
+                                            $productname = $ligne["Libellép"];
 
 
-                                                    ?>
-                                        <div class="my-2">
-                                        <li><a href="productscontroller.php" class="text-black hover:text-blue-500"> <?php echo $productname ?></a></li>
+                                            ?>
+                                            <div class="my-2">
+                                                <li><a href="productscontroller.php" class="text-black hover:text-blue-500">
+                                                        <?php echo $productname ?></a></li>
                                             </div>
-                                         <?php
-                                            }
-                                         ?>
-                                        
+                                            <?php
+                                        }
+                                        ?>
+
                                     </ul>
                                 </div>
                                 <div class="p-4 mt-5 border border-gray-200 rounded-md bg-gray-50">
@@ -203,11 +207,11 @@
                     overlay.classList.remove('filter-menu-open');
                 });
                 const priceRange = document.getElementById('priceRange');
-        const selectedPrice = document.getElementById('selectedPrice');
+                const selectedPrice = document.getElementById('selectedPrice');
 
-        priceRange.addEventListener('input', () => {
-            selectedPrice.textContent = `$${priceRange.value}`;
-        });
+                priceRange.addEventListener('input', () => {
+                    selectedPrice.textContent = `$${priceRange.value}`;
+                });
             </script>
         </div>
 
@@ -215,53 +219,114 @@
 
         <div>
 
-                
-        <div class="grid w-auto grid-cols-1 pl-0 p-7 md:grid-rows-3 md:grid-cols-subgrid md:grid-flow-col ">
-    <?php 
-    
-    
-        /*$conn = new PDO('mysql:host=localhost;port=3308;dbname=pharmacie', 'root', '');
-        $query = "SELECT IDp, Prixv, IDcat, Libellép , Imagep FROM produit";
-        $result = $conn->query($query);
-        $data = $result->fetchAll(PDO::FETCH_ASSOC);*/
-        $price =9999;
-        if(isset($_GET["priceRange"])){
-            $price = $_GET["priceRange"];
 
-        }
-        $obj = new Products($price);
-        
+            <div class="grid w-auto grid-cols-1 pl-0 p-7 md:grid-rows-3 md:grid-cols-subgrid md:grid-flow-col ">
+                <?php
 
-        if( isset($_GET["category"]) ){
-            
-            $data = $obj->getFilteredbyCategory($_GET["category"]);
-        }else{
-            $data = $obj->getFilteredProducts();
-        }
-        
-        
-        
-       
-        foreach ($data as $ligne) {
-            
-            $id = $ligne["IDp"];
-            $Productprix = $ligne["Prixv"];
-            $Productcategory = $ligne["Libelléca"];
-            $Productname = $ligne["Libellép"];
-            $Productimage = $ligne["Imagep"];
-            
-            ?>
-            <div class="my-2">
-                <?php include '../PRODUCTCARD/cardcontroller.php'; ?>
+
+                /*$conn = new PDO('mysql:host=localhost;port=3308;dbname=pharmacie', 'root', '');
+                $query = "SELECT IDp, Prixv, IDcat, Libellép , Imagep FROM produit";
+                $result = $conn->query($query);
+                $data = $result->fetchAll(PDO::FETCH_ASSOC);*/
+                $price = 9999;
+                if (isset($_GET["priceRange"])) {
+                    $price = $_GET["priceRange"];
+
+                }
+                $obj = new Products($price);
+
+
+                if (isset($_GET["category"])) {
+
+                    $data = $obj->getFilteredbyCategory($_GET["category"]);
+                } else {
+                    $data = $obj->getFilteredProducts();
+                }
+
+
+
+
+                foreach ($data as $ligne) {
+
+                    $id = $ligne["IDp"];
+                    $Productprix = $ligne["Prixv"];
+                    $Productcategory = $ligne["Libelléca"];
+                    $Productname = $ligne["Libellép"];
+                    $Productimage = $ligne["Imagep"];
+
+                    ?>
+                    <div class="my-2">
+                        <?php include '../PRODUCTCARD/cardcontroller.php'; ?>
+                    </div>
+                    <?php
+                }
+
+
+                ?>
             </div>
-            <?php
-        }
-        
-    
-    ?>
-      </div>
         </div>
     </div>
+    <!--Pagination  -> :-->
+    <!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+
+    <ol class="w-full flex justify-center gap-1 text-xl font-medium">
+        <li>
+            <a href="#"
+                class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180">
+                <span class="sr-only">Prev Page</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+        </li>
+
+        <li>
+            <a href="#"
+                class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900">
+                1
+            </a>
+        </li>
+
+        <li class="block size-8 rounded border-blue-600 bg-blue-600 text-center leading-8 text-white">
+            2
+        </li>
+
+        <li>
+            <a href="#"
+                class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900">
+                3
+            </a>
+        </li>
+
+        <li>
+            <a href="#"
+                class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900">
+                4
+            </a>
+        </li>
+
+        <li>
+            <a href="#"
+                class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180">
+                <span class="sr-only">Next Page</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+        </li>
+    </ol>
+    <div>
+
+    </div>
+
 </body>
 
 </html>
