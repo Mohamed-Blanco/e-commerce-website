@@ -17,6 +17,9 @@ if (isset($_POST['email'])) {
     $userModel = new UserModel($db);
 
 
+
+    //$userModel->verify($email,$password);
+
     if ($userModel->verify($email,$password)) {
         header("location:../HOME/homeview.php");
         exit();
@@ -110,6 +113,7 @@ if (isset($_POST['nemail'])) {
     
     
     $userModel = new UserModel($db);
+    
 
 
     if (!$userModel->adduser($prenom,$nom,$email,$password,$tele,$date,$sexe,$age,$adress)) {
