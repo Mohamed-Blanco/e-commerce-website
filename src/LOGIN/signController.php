@@ -17,7 +17,7 @@ if (isset($_POST['email'])) {
     $userModel = new UserModel($db);
 
 
-    if ($userModel->verify($email,$password)) {
+    if ($userModel->verify($email,md5($password))) {
         header("location:../HOME/homeview.php");
         exit();
     } else {
@@ -112,7 +112,7 @@ if (isset($_POST['nemail'])) {
     $userModel = new UserModel($db);
 
 
-    if (!$userModel->adduser($prenom,$nom,$email,$password,$tele,$date,$sexe,$age,$adress)) {
+    if (!$userModel->adduser($prenom,$nom,$email,md5($password),$tele,$date,$sexe,$age,$adress)) {
         
     
         header("Location:signup.php?err=2");

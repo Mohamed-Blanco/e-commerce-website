@@ -42,10 +42,10 @@ include '../NAVBAR/navbarcontroller.php';
             <div class="flex my-5 gap-8">
 
                 <?php
-                echo '<img  class="rounded-lg w-24 hover:border-gray-500 border-gray-200 border-2" src="data:image/jpeg;base64,' . base64_encode($Productimage) . '"style="height: 100px; width: auto;" />';
+                echo '<img  class="rounded-lg w-24 hover:border-gray-500 border-gray-200 border-2" src="data:image/jpeg;base64,' . base64_encode($Productimage1) . '"style="height: 100px; width: auto;" />';
                 ?>
                 <?php
-                echo '<img   class="rounded-lg w-24 hover:border-gray-500 border-gray-200 border-2" src="data:image/jpeg;base64,' . base64_encode($Productimage) . '" style="height: 100px; width: auto;" />';
+                echo '<img   class="rounded-lg w-24 hover:border-gray-500 border-gray-200 border-2" src="data:image/jpeg;base64,' . base64_encode($Productimage2) . '" style="height: 100px; width: auto;" />';
                 ?>
 
             </div>
@@ -58,7 +58,7 @@ include '../NAVBAR/navbarcontroller.php';
                 <li class="my-5">
                     <hr>
                 </li>
-                <li class="text-xl">SVR TOPIALYSE BAUME EN SPRAY PEAUX TRÈS SÈCHES À ATOPIQUE 200ML</li>
+                <li class="text-xl"><?php echo $ProductDesc ?></li>
                 <li class="my-5">
                     <hr>
                 </li>
@@ -86,38 +86,37 @@ include '../NAVBAR/navbarcontroller.php';
                         <p class="text-gray-400"><?php echo 'Quantité Actual ' . $ProductQte ?></p>
                         <hr>
                     </li>
-                    <li class="m:px-16 py-12 flex">
-                        <input type="number" value="0"
-                            class=" mr-5 self-center w-10  mt-[20px] md:mr-12 bg-white border-2 border-[rgb(21,12,107)] rounded-lg flex justify-center items-center h-10">
-                        <button
-                            class="bg-[rgb(39,197,143)] text-white  rounded-tl-3xl rounded-br-3xl rounded-bl-3xl mt-[20px] md:mr-[50px] text-lg mx-auto  w-2/3 h-12 flex justify-center items-center gap-5">j'Achete
-                            Maintenant
-                            <i class="fa-solid fa-cart-shopping"></i></button>
-                            <form action=""></form>
-                            <form  action="">
-                        <button type="submit" name="action" value="favoriser"
-                            class="bg-[rgb(21,12,107)] text-white  rounded-tl-3xl rounded-br-3xl  mt-[20px] md:mr-[30px]  ml-5 mx-auto  w-1/5 h-12 p-2 flex items-center gap-2">
-                            Favoriser<i class="fa-solid fa-heart"></i></button>
-                        <textarea name="product" class="hidden"><?php echo $productname ?></textarea>
+                    <li class="m:px-16 py-6 flex">
+                        <form action="ficheController.php" method="get">
+                            <input type="number" name="qte" value="0"
+                                class=" mr-5 self-center w-10  mt-[20px] md:mr-12 bg-white border-2 border-[rgb(21,12,107)] rounded-lg flex justify-center items-center h-10">
+                            <button name="action" type="submit" value="checkout"
+                                class="bg-[rgb(39,197,143)] text-white  rounded-tl-3xl rounded-br-3xl rounded-bl-3xl mt-[20px] md:mr-[50px] text-lg mx-auto  w-2/3 h-12 flex justify-center items-center gap-5">j'Achete
+                                Maintenant
+                                <i class="fa-solid fa-cart-shopping"></i></button>
+
+
+                            <button type="submit" name="action" value="favoriser"
+                                class="bg-[rgb(21,12,107)] text-white  rounded-tl-3xl rounded-br-3xl  mt-[20px] md:mr-[30px]  ml-5 mx-auto  w-1/5 h-12 p-2 flex items-center gap-2">
+                                Favoriser<i class="fa-solid fa-heart"></i></button>
+                            <textarea name="product" class="hidden"><?php echo $productname ?></textarea>
+                        </form>
                     </li>
-                </form>
-                <li class="">
-                    <hr>
-                    <ul class="my-5 flex justify-between">
-                        <li class="text-sm">PAIEMENT SÉCURISÉ PAR LE CMI</li>
-                        <li class=""><img src="../images/Visa.png" alt=""></li>
-                    </ul>
-                    <hr>
-                </li>
-                <li class="py-6">
-                    <ul>
-                        <li class="font-bold">CONSEILS D'UTILISATION :</li>
-                        <p class="p-2 text-gray-600 text-sm">Nettoyer préalablement la peau avec TOPIALYSE Baume Lavant.
-                            Vaporiser à 15cm de la peau SVR TOPIALYSE Baume en Spray Peaux Très Sèches à Atopique avant
-                            d'étaler en insistant sur les zones très sèches et irritées.
-                            NB : Pour une utilisation sur le visage, pulveriser au creux des mains.</p>
-                    </ul>
-                </li>
+
+                    <li class="">
+                        <hr>
+                        <ul class="my-5 flex justify-between">
+                            <li class="text-sm">PAIEMENT SÉCURISÉ PAR LE CMI</li>
+                            <li class=""><img src="../images/Visa.png" alt=""></li>
+                        </ul>
+                        <hr>
+                    </li>
+                    <li class="py-6">
+                        <ul>
+                            <li class="font-bold">CONSEILS D'UTILISATION :</li>
+                            <p class="p-2 text-gray-600 text-sm"><?php echo $ProductCons ?></p>
+                        </ul>
+                    </li>
             </ul>
 
         </div>

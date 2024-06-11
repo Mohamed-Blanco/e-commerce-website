@@ -9,7 +9,7 @@ class Fichemodel
         $conn = PDOModel::getconection();
 
 
-        $query = "SELECT p.IDp, p.IDcat, p.Prixv, p.Libellép, p.Imagep, c.Libelléca , p.Codebr , p.Qte , p.Image1, p.Image2 , p.BesoinORD 
+        $query = "SELECT p.IDp, p.IDcat, p.Prixv, p.Libellép, p.Imagep, c.Libelléca , p.Codebr , p.Qte , p.Image1, p.Image2 , p.BesoinORD ,p.Description,p.Conseils
             FROM produit p
             INNER JOIN catégorie c ON p.IDcat = c.IDcat
             WHERE p.Libellép LIKE :libeller";
