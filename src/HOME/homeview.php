@@ -99,7 +99,7 @@ include '../NAVBAR/navbarcontroller.php'
     <?php include 'Carousel1.php' ?>
 
     <div class="md:flex m-10 md:justify-between">
-        <span class="shrink-0 px-6 poppins font-bold text-2xl">Nouveaux produits du mois : </span>
+        <span class="shrink-0 px-6 poppins font-bold text-2xl " style="margin-bottom: 25px">Nouveaux produits du mois : </span>
         <a  href="../PRODUCTS/productscontroller.php" class="  "><button
                 class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
                     class="text-white fa-solid fa-arrow-right  "> </i></button></a>
@@ -108,7 +108,7 @@ include '../NAVBAR/navbarcontroller.php'
 
     <!--new Products 15 Code Begin Here -> :-->
 
-    <div class="mx-auto mt-10 rounded w-100">
+    <div class="mx-auto mt-10 rounded w-100" style="margin-bottom: 25px">
 
         <div id="default-carousel" class="relative" data-carousel="static">
 
@@ -206,6 +206,10 @@ include '../NAVBAR/navbarcontroller.php'
                 </div>
 
             <!--Categories Code Begin Here -> :-->
+            <div class="md:flex m-10 md:justify-between">
+        <span class="shrink-0 px-6 poppins font-bold text-2xl" style="margin-bottom: 25px">Catégories disponible : </span>
+        
+    </div>
 
             <div class="relative w-full mt-10">
             <div class="carousel-container">
@@ -262,6 +266,13 @@ include '../NAVBAR/navbarcontroller.php'
         </script>
 
         <!--Categories Code Ends Here -> :-->
+
+        <div class="md:flex m-10 md:justify-between">
+        <span class="shrink-0 px-6 poppins font-bold text-2xl" style="margin-bottom: 25px , margin-top: 25px" >les plus vendue du mois : </span>
+        <a  href="../PRODUCTS/productscontroller.php" class="  "><button
+                class=" m-5  md:m-0 rounded-full bg-black w-28 h-9 poppins text-white pulse">Voir Tout <i
+                    class="text-white fa-solid fa-arrow-right  "> </i></button></a>
+    </div>
 
         <div class="w-full mx-auto mt-10 rounded">
     <div id="default-carousel" class="relative" data-carousel="static">
@@ -329,6 +340,8 @@ include '../NAVBAR/navbarcontroller.php'
             ?>
         </div>
     </div>
+
+    
 
 
     <script src="https://kit.fontawesome.com/beb14da2c9.js" crossorigin="anonymous"></script>
