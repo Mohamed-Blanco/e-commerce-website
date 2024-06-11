@@ -37,21 +37,21 @@
             <h3 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r  from-blue-500 to-teal-400">
                 100K+
             </h3>
-            <p class="mt-2 text-xl font-semibold text-gray-900">Monthly visits</p>
+            <p class="mt-2 text-xl font-semibold text-gray-900">Visites mensuelles</p>
             
         </div>
         <div class="bg-white shadow-lg rounded-lg p-8">
             <h3 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
                 12K+
             </h3>
-            <p class="mt-2 text-xl font-semibold text-gray-900">Customers</p>
+            <p class="mt-2 text-xl font-semibold text-gray-900">Clientèle</p>
            
         </div>
         <div class="bg-white shadow-lg rounded-lg p-8">
             <h3 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r  from-blue-500 to-teal-400">
                 20+
             </h3>
-            <p class="mt-2 text-xl font-semibold text-gray-900">Industry Awards</p>
+            <p class="mt-2 text-xl font-semibold text-gray-900">Prix de l'industrie</p>
         </div>
     </div>
 </div>
