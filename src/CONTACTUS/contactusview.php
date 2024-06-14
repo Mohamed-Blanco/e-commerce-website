@@ -1,6 +1,6 @@
 <?php 
 session_start();
-    include '../NAVBAR/navbarcontroller.php';
+    include_once '../NAVBAR/navbarcontroller.php';
     if(isset($_SESSION["nom"])){
         echo "<script>alert('email has been sended ')</script>";
         unset($_SESSION["nom"]);

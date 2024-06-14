@@ -69,7 +69,7 @@
               <li class="flex flex-wrap gap-4 text-sm">Discount (20%) <span class="ml-auto font-bold">4.00dh</span></li>
               <li class="flex flex-wrap gap-4 text-sm">Tax <span class="ml-auto font-bold">4.00dh</span></li>
               <hr />
-              <li class="flex flex-wrap gap-4 text-base font-bold">Total <span class="ml-auto">52.00dh</span></li>
+              <li class="flex flex-wrap gap-4 text-base font-bold">Total <span class="ml-auto">468.00dh</span></li>
             </ul>
           </div>
         </div>

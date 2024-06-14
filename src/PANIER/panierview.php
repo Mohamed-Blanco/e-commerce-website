@@ -1,10 +1,11 @@
-<?php include '../NAVBAR/navbarcontroller.php'?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="../output.css" rel="stylesheet">
 
 </head>
@@ -56,6 +57,8 @@
 </style>
 
 <body style="background-color:white">
+
+
     <div class="bg-green-100 p-5">
         <ul id="slidedown" class="flex-rew">
             <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Panier</li>
@@ -143,7 +146,7 @@
                 <tr>
                     <th class="px-7">
                         <div class="flex flex-col space-y-4">
-                            <a href="/checkout" class="bg-amber-600 text-white font-bold py-2 rounded-full text-center hover:bg-amber-700">Passez à la caisse</a>
+                            <a href="../CHECKOUT/checkoutcontroller.php" class="bg-amber-600 text-white font-bold py-2 rounded-full text-center hover:bg-amber-700">Passez à la caisse</a>
                             <a href="../PRODUCTS/productscontroller.php" class="bg-gray-200 text-gray-800 font-bold py-2 rounded-full text-center hover:bg-gray-300">Continuer Shopping</a>
                         </div>
                     </th>

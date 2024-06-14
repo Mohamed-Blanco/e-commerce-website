@@ -31,8 +31,8 @@
     }
 </style>
 
-<body class=" poppins ">
-    <div class="fixed w-full z-50 bg-white" >
+<body class=" poppins "  >
+    <div  class=" fixed w-full  z-50 bg-white">
         <nav style=" background-color : #6dd089  ; "
             class=" hidden    pl-10 pr-5 p-2  md:items-center jus md:flex md:justify-between">
             <p class="pl-5 hover:text-green-500 text-black duration-500">En raison de l'épidémie de COVID-19, les
@@ -68,7 +68,8 @@
                         class=" text-black hover:text-green-500 duration-500 ">Produits</a>
                 </li>
                 <li class="mx-8">
-                    <a href="../ABOUT/aboutview.php" class=" text-black hover:text-green-500 duration-500 ">About Us</a>
+                    <a href="../ABOUT/aboutcontroller.php" class=" text-black hover:text-green-500 duration-500 ">About
+                        Us</a>
                 </li>
                 <li class="mx-8">
                     <a href="../CONTACTUS/contactusview.php"

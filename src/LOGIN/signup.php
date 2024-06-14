@@ -59,6 +59,13 @@ include '../NAVBAR/navbarcontroller.php';
     }
 </style>
 <body style=" background-color: white;"class="poppins flex items-center">
+<div class="p-1 bg-green-100 " style="">
+        <ul id="slidedown" class="flex-row">
+            <li class="mt-5 mb-2 text-2xl text-center text-black text-bold">Shop</li>
+            <li class="mb-5 text-center text-bold "><span> </span> <span class="text-black text-bold"><i
+                        class="fa-solid fa-caret-right"></i> </span></li>
+        </ul>
+    </div>
 <div class="bg-green-100 p-5">
         <ul id="slidedown" class="flex-rew">
             <li class="text-2xl text-center text-black text-bold mt-5 mb-2">Sign Up</li>
